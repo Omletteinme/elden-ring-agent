@@ -33,8 +33,15 @@ React chat UI → FastAPI /chat → Agent (Groq) → decides: answer directly, o
 - **Chunking**: infobox stats extracted as structured "Label: Value" chunks; body text split per-section, with page title + URL kept as metadata for citations — see `src/chunking.py`
 - **Retrieval**: hybrid vector (sentence-transformers `all-MiniLM-L6-v2`, local/free) + keyword (BM25) search, fused via reciprocal rank fusion, with title-aware boosting when the query names a specific page — see `src/retrieval.py`
 - **Vector store**: Chroma (local, persisted to `data/chroma/`)
-- **Agent**: Groq (`openai/gpt-oss-20b`) with a `search_wiki` tool the model calls when it needs information, rather than always retrieving — see `src/agent.py`
+- **Agent**: Groq (`openai/gpt-oss-20b`) with two tools — `search_wiki` (retrieval) and `recommend_weapons` (structured ranking) — that the model calls when needed, rather than always retrieving — see `src/agent.py`
+- **Corpus**: 365 pages / ~2,600 chunks — 245 individual weapons (with parsed scaling grades + attribute requirements), plus bosses, talismans, sorceries, incantations
 - **Eval**: 27 hand-written, hand-verified QA pairs across 5 question types, scored on retrieval accuracy + answer correctness/faithfulness — see `eval/`
+
+## Build recommendations (why there are two tools, not one)
+
+"Best weapon for a strength build" is a **ranking** problem, not a similarity match — and pure retrieval fails it: the per-weapon stat chunks are textually near-identical ("Requires: …; Scaling: …"), so vector/keyword search returns an *arbitrary* set of strength-ish weapons, not the best ones. So there's a second tool, `recommend_weapons` (`src/recommend.py`): it parses the weapon attribute chunks into structured records and ranks them **deterministically** by scaling grade (S > A > B > C > D > E). The agent routes weapon-build questions to it and spell-build questions to `search_wiki`, and recommends only from what the tools actually return.
+
+Honest caveats, stated because they're real: the scaling grades are **base** grades (before affinities/upgrades), and the ranking is over the **indexed subset** (245 weapons, ~8 per type), not every weapon in the game — the agent says so rather than implying an exhaustive best-in-slot list.
 
 ## Design decisions worth knowing (found the hard way)
 
@@ -53,7 +60,8 @@ Building phase by phase — see progress below.
 - [x] Phase 3 — Embed + vector store (Chroma + BM25 hybrid retrieval, fused via RRF)
 - [x] Phase 4 — Agent loop with tool-calling (Groq `openai/gpt-oss-20b`, multi-hop search)
 - [x] Phase 5 — Eval harness (27 questions, see results below)
-- [x] Phase 6 — Frontend + backend, running locally end-to-end (cloud deploy: not yet, see below)
+- [x] Phase 6 — Frontend + backend, deployed (Hugging Face Spaces + Vercel)
+- [x] Phase 7 — Build recommendations: 245 individual weapons with parsed scaling/requirement stats + a structured `recommend_weapons` ranking tool
 
 ## Eval results
 
