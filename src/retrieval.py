@@ -21,6 +21,20 @@ EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
 RRF_K = 60  # standard RRF constant; de-emphasizes rank differences beyond the top few
 
+# If the query names a specific page (e.g. "Ancient Death Rancor patch"),
+# strongly prefer that page's own chunks over other pages that happen to
+# score better on the query's other terms. Without this, a query mixing an
+# entity name with a topic keyword (e.g. "<item> patch changes") routinely
+# loses to *other* pages' patch-note-heavy chunks, even though the
+# entity's own (less keyword-dense) chunk is the actually-correct answer --
+# confirmed empirically: "Ancient Death Rancor patch" ranked that page's
+# own Description chunk (which has the patch note) 13th, crowded out by
+# unrelated bosses/items that merely score higher on "patch" alone.
+# 0.05 comfortably exceeds the largest possible RRF score (two rank-1 hits
+# ~= 0.033), so any title match outranks any non-match, while chunks
+# *within* the matched title still sort by their normal RRF score.
+TITLE_BOOST = 0.05
+
 
 @lru_cache(maxsize=1)
 def _get_model() -> SentenceTransformer:
@@ -69,14 +83,22 @@ def search(query: str, k: int = 5, candidate_pool: int = 20) -> list[dict]:
     for rank, cid in enumerate(keyword_ids):
         rrf_scores[cid] = rrf_scores.get(cid, 0) + 1 / (RRF_K + rank + 1)
 
-    top_ids = sorted(rrf_scores.keys(), key=lambda cid: rrf_scores[cid], reverse=True)[:k]
-
+    # fetch metadata for the whole candidate pool up front so title-boost
+    # can be applied before truncating to k
+    candidate_ids = list(rrf_scores.keys())
     collection = _get_collection()
-    fetched = collection.get(ids=top_ids, include=["documents", "metadatas"])
+    fetched = collection.get(ids=candidate_ids, include=["documents", "metadatas"])
     id_to_result = {
         cid: {"id": cid, "text": doc, **meta}
         for cid, doc, meta in zip(fetched["ids"], fetched["documents"], fetched["metadatas"])
     }
+
+    query_lower = query.lower()
+    for cid, result in id_to_result.items():
+        if result["title"].lower() in query_lower:
+            rrf_scores[cid] += TITLE_BOOST
+
+    top_ids = sorted(rrf_scores.keys(), key=lambda cid: rrf_scores[cid], reverse=True)[:k]
     return [id_to_result[cid] for cid in top_ids if cid in id_to_result]
 
 

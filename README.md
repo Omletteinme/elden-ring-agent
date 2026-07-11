@@ -31,7 +31,7 @@ Building phase by phase — see progress below.
 - [x] Phase 1 — Corpus collection (150 pages: Weapons/Bosses/Talismans/Sorceries/Incantations, 30 each, via MediaWiki API)
 - [x] Phase 2 — Clean + chunk (882 chunks from 150 pages)
 - [x] Phase 3 — Embed + vector store (Chroma + BM25 hybrid retrieval, fused via RRF)
-- [ ] Phase 4 — Agent loop with tool-calling
+- [x] Phase 4 — Agent loop with tool-calling (Groq `openai/gpt-oss-20b`, multi-hop search)
 - [ ] Phase 5 — Eval harness
 - [ ] Phase 6 — Frontend + deploy
 
