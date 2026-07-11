@@ -1,0 +1,34 @@
+[
+  {"id": "q01", "type": "factual", "question": "What is the FP cost of Eternal Darkness?", "expected_titles": ["Eternal Darkness"], "expected_facts": ["25"]},
+  {"id": "q02", "type": "factual", "question": "How many memory slots does Blades of Stone take up?", "expected_titles": ["Blades of Stone"], "expected_facts": ["2"]},
+  {"id": "q03", "type": "factual", "question": "What is the Intelligence requirement for Adula's Moonblade?", "expected_titles": ["Adula's Moonblade"], "expected_facts": ["32"]},
+  {"id": "q04", "type": "factual", "question": "What is the FP cost of Assassin's Approach?", "expected_titles": ["Assassin's Approach"], "expected_facts": ["15"]},
+  {"id": "q05", "type": "factual", "question": "What does the Ailment Talisman do?", "expected_titles": ["Ailment Talisman"], "expected_facts": ["resistance", "ailment"]},
+  {"id": "q06", "type": "factual", "question": "How much does the Ancestral Spirit's Horn talisman weigh?", "expected_titles": ["Ancestral Spirit's Horn"], "expected_facts": ["1.2"]},
+  {"id": "q07", "type": "factual", "question": "What is the sell price of the Boltdrake Talisman +1?", "expected_titles": ["Boltdrake Talisman +1"], "expected_facts": ["500"]},
+  {"id": "q08", "type": "factual", "question": "How much HP does the Ancestor Spirit boss have?", "expected_titles": ["Ancestor Spirit"], "expected_facts": [["4,393", "4393"]]},
+  {"id": "q09", "type": "factual", "question": "Where can I find the Cemetery Shade boss?", "expected_titles": ["Cemetery Shade"], "expected_facts": ["Gelmir"]},
+  {"id": "q10", "type": "factual", "question": "What does the Cemetery Shade drop?", "expected_titles": ["Cemetery Shade"], "expected_facts": ["Mantis Blade"]},
+  {"id": "q11", "type": "factual", "question": "What weapon skill does the Crystal Sword have?", "expected_titles": ["Crystal Sword"], "expected_facts": ["Spinning Slash"]},
+  {"id": "q12", "type": "factual", "question": "What FP cost does Bloodboon have?", "expected_titles": ["Bloodboon"], "expected_facts": ["13"]},
+
+  {"id": "q13", "type": "patch_history", "question": "How did patch 1.07 change Ancient Death Rancor?", "expected_titles": ["Ancient Death Rancor"], "expected_facts": ["24", "21"]},
+  {"id": "q14", "type": "patch_history", "question": "What did patch 1.07 change about Briars of Punishment?", "expected_titles": ["Briars of Punishment"], "expected_facts": ["13", "9"]},
+  {"id": "q15", "type": "patch_history", "question": "How did patch 1.07 affect Agheel's Flame in PvP?", "expected_titles": ["Agheel's Flame"], "expected_facts": ["80"]},
+
+  {"id": "q16", "type": "multi_hop", "question": "Which costs more FP: Eternal Darkness or Blades of Stone?", "expected_titles": ["Eternal Darkness", "Blades of Stone"], "expected_facts": ["Eternal Darkness"]},
+  {"id": "q17", "type": "multi_hop", "question": "Compare the HP of Ancestor Spirit and Cemetery Shade -- which has more?", "expected_titles": ["Ancestor Spirit", "Cemetery Shade"], "expected_facts": ["Ancestor Spirit"]},
+  {"id": "q18", "type": "multi_hop", "question": "Which weighs more: Ancestral Spirit's Horn or Ailment Talisman?", "expected_titles": ["Ancestral Spirit's Horn", "Ailment Talisman"], "expected_facts": ["Ancestral Spirit's Horn"]},
+
+  {"id": "q19", "type": "out_of_scope", "question": "What is the best armor set for a strength build?", "expected_refusal": true},
+  {"id": "q20", "type": "out_of_scope", "question": "Where can I find the Ash of War Barbaric Roar?", "expected_refusal": true},
+  {"id": "q21", "type": "out_of_scope", "question": "Tell me about Ranni's questline.", "expected_refusal": true},
+  {"id": "q22", "type": "out_of_scope", "question": "What are the starting stats of the Vagabond class?", "expected_refusal": true},
+  {"id": "q23", "type": "out_of_scope", "question": "What's the layout of Stormveil Castle?", "expected_refusal": true},
+
+  {"id": "q24", "type": "adversarial", "question": "What is the FP cost of the spell 'Ancient Death Ritual'?", "expected_refusal": true, "notes": "Nonexistent item name similar to a real one (Ancient Death Rancor) -- tests the agent doesn't fabricate a plausible-sounding answer for something not in the corpus."},
+  {"id": "q25", "type": "factual", "question": "What type of sorcery is Adula's Moonblade classified as?", "expected_titles": ["Adula's Moonblade"], "expected_facts": ["Cold Sorcery", "Cold"]},
+
+  {"id": "q26", "type": "adversarial", "question": "What is the weight of the talisman 'Ancestral Horn'?", "expected_refusal": true, "notes": "Near-miss of the real 'Ancestral Spirit's Horn' -- same failure mode as q24, different item."},
+  {"id": "q27", "type": "adversarial", "question": "What's the HP of the boss 'Ancestor Spirit's Guardian'?", "expected_refusal": true, "notes": "Near-miss of the real 'Ancestor Spirit' boss."}
+]

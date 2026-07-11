@@ -1,0 +1,489 @@
+{
+  "summary": {
+    "total_questions": 27,
+    "answer_accuracy": 0.9259259259259259,
+    "retrieval_full_hit_rate": 1.0,
+    "refusal_accuracy": 0.75,
+    "by_type": {
+      "patch_history": {
+        "count": 3,
+        "answer_accuracy": 1.0
+      },
+      "factual": {
+        "count": 13,
+        "answer_accuracy": 1.0
+      },
+      "out_of_scope": {
+        "count": 5,
+        "answer_accuracy": 1.0
+      },
+      "multi_hop": {
+        "count": 3,
+        "answer_accuracy": 1.0
+      },
+      "adversarial": {
+        "count": 3,
+        "answer_accuracy": 0.3333333333333333
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "q01",
+      "type": "factual",
+      "question": "What is the FP cost of Eternal Darkness?",
+      "retrieval": {
+        "expected": [
+          "Eternal Darkness"
+        ],
+        "retrieved": [
+          "Assassin's Approach",
+          "Beast Claw (Spell)",
+          "Black Flame Ritual",
+          "Eternal Darkness"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The FP cost for **Eternal Darkness** is **25 FP**.  \n\nSources:  \n- *Eternal Darkness* – Infobox, “FP Cost: 25”【search_wiki output】【1】",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q02",
+      "type": "factual",
+      "question": "How many memory slots does Blades of Stone take up?",
+      "retrieval": {
+        "expected": [
+          "Blades of Stone"
+        ],
+        "retrieved": [
+          "Backhand Blades",
+          "Black Blade",
+          "Blades of Stone"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Blades of Stone uses **2 memory slots**.\n\n**Sources**\n\n- [\"Blades of Stone – Infobox\"](https://eldenring.fandom.com/wiki/Blades_of_Stone) – lists Memory Slots: 2.",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q03",
+      "type": "factual",
+      "question": "What is the Intelligence requirement for Adula's Moonblade?",
+      "retrieval": {
+        "expected": [
+          "Adula's Moonblade"
+        ],
+        "retrieved": [
+          "Adula's Moonblade",
+          "Ancient Dragons' Lightning Spear"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The sorcery **Adula's Moonblade** requires **Intelligence 32** to cast.\n\n**Sources**\n\n- “Adula's Moonblade — Infobox”, Elden Ring Wiki: https://eldenring.fandom.com/wiki/Adula's_Moonblade",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q04",
+      "type": "factual",
+      "question": "What is the FP cost of Assassin's Approach?",
+      "retrieval": {
+        "expected": [
+          "Assassin's Approach"
+        ],
+        "retrieved": [
+          "Assassin's Approach",
+          "Beast Claw (Spell)"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "**Assassin's Approach** FP Cost: **15** FP per cast【Assassin's Approach — Infobox】.  \n\n**Sources**  \n- [\"Assassin's Approach — Infobox\"](https://eldenring.fandom.com/wiki/Assassin's_Approach)",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q05",
+      "type": "factual",
+      "question": "What does the Ailment Talisman do?",
+      "retrieval": {
+        "expected": [
+          "Ailment Talisman"
+        ],
+        "retrieved": [
+          "Ailment Talisman"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The **Ailment Talisman** is a talisman that grants temporary resistance to certain ailments when you are afflicted.  \n\n- When you take an ailment, the talisman immediately reduces the buildup or duration of that ailment and gives you resistance for a short period:  \n  * Poison / Scarlet Rot resistance – 120 s  \n  * Frostbite resistance – 45 s  \n  * Hemorrhage, Sleep, and Madness resistance – 30 s  \n\nDeath Blight is not affected, as it kills the player. The talisman is useful in areas or encounters where specific status effects are common.  \n\nSources:  \n- [\"Ailment Talisman — Overview\"](https://eldenring.fandom.com/wiki/Ailment_Talisman)  \n- [\"Ailment Talisman — Notes\"](https://eldenring.fandom.com/wiki/Ailment_Talisman)",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q06",
+      "type": "factual",
+      "question": "How much does the Ancestral Spirit's Horn talisman weigh?",
+      "retrieval": {
+        "expected": [
+          "Ancestral Spirit's Horn"
+        ],
+        "retrieved": [
+          "Ancestor Spirit",
+          "Ancestral Spirit's Horn",
+          "Bull-Goat's Talisman"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The Ancestral Spirit's Horn talisman weighs **1.2**.\n\nSources:\n- “Ancestral Spirit's Horn” – Infobox (Weight: 1.2) – https://eldenring.fandom.com/wiki/Ancestral_Spirit's_Horn",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q07",
+      "type": "factual",
+      "question": "What is the sell price of the Boltdrake Talisman +1?",
+      "retrieval": {
+        "expected": [
+          "Boltdrake Talisman +1"
+        ],
+        "retrieved": [
+          "Boltdrake Talisman",
+          "Boltdrake Talisman +1"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The sell price of the **Boltdrake Talisman +1** is **500 gil**【search_wiki 1】.  \n\nSources:  \n- *Boltdrake Talisman +1* – Infobox (Sell Price: 500) – https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+1",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q08",
+      "type": "factual",
+      "question": "How much HP does the Ancestor Spirit boss have?",
+      "retrieval": {
+        "expected": [
+          "Ancestor Spirit"
+        ],
+        "retrieved": [
+          "Ancestor Spirit"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The Ancestor Spirit boss has **4,393 HP**【0†Ancestor Spirit — Stats】.  \n\nSources:  \n- Ancestor Spirit — Stats (https://eldenring.fandom.com/wiki/Ancestor_Spirit)",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q09",
+      "type": "factual",
+      "question": "Where can I find the Cemetery Shade boss?",
+      "retrieval": {
+        "expected": [
+          "Cemetery Shade"
+        ],
+        "retrieved": [
+          "Cemetery Shade"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The Cemetery Shade boss is located in **Gelmir Hero’s Grave** on the **Cerulean Coast** of the game world.  \n\nSources:  \n- [\"Cemetery Shade — Infobox\"](https://eldenring.fandom.com/wiki/Cemetery_Shade) – lists the location as Gelmir Hero’s Grave, Cerulean Coast.",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q10",
+      "type": "factual",
+      "question": "What does the Cemetery Shade drop?",
+      "retrieval": {
+        "expected": [
+          "Cemetery Shade"
+        ],
+        "retrieved": [
+          "Cemetery Shade"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The Cemetery Shade drops a **Mantis Blade** when defeated.\n\n**Sources**\n\n- \"Cemetery Shade — Infobox\" – https://eldenring.fandom.com/wiki/Cemetery_Shade【2】",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q11",
+      "type": "factual",
+      "question": "What weapon skill does the Crystal Sword have?",
+      "retrieval": {
+        "expected": [
+          "Crystal Sword"
+        ],
+        "retrieved": [
+          "Crystal Sword"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "The Crystal Sword’s weapon skill is **Spinning Slash**【2】.  \n\nSources  \n- “Crystal Sword – Infobox” – https://eldenring.fandom.com/wiki/Crystal_Sword【2】",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q12",
+      "type": "factual",
+      "question": "What FP cost does Bloodboon have?",
+      "retrieval": {
+        "expected": [
+          "Bloodboon"
+        ],
+        "retrieved": [
+          "Assassin's Approach",
+          "Bloodboon",
+          "Briars of Punishment",
+          "Crystal Release"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "**Bloodboon** (Incantation) – FP cost: **13 FP**【1†Bloodboon — Infobox】.\n\n*Note:* In patch 1.07 the FP cost was reduced from 13 to 9, but the current cost remains 13 FP.\n\n**Sources:**  \n- Bloodboon — Infobox, Elden Ring Wiki (FP Cost: 13) https://eldenring.fandom.com/wiki/Bloodboon",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q13",
+      "type": "patch_history",
+      "question": "How did patch 1.07 change Ancient Death Rancor?",
+      "retrieval": {
+        "expected": [
+          "Ancient Death Rancor"
+        ],
+        "retrieved": [
+          "Agheel's Flame",
+          "Ancient Death Rancor",
+          "Briars of Punishment"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Ancient Death Rancor’s FP cost was lowered in patch 1.07, dropping from 24 FP to 21 FP.  \n\nSources:  \n- “Ancient Death Rancor – Description” – Elden Ring Wiki: https://eldenring.fandom.com/wiki/Ancient_Death_Rancor",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q14",
+      "type": "patch_history",
+      "question": "What did patch 1.07 change about Briars of Punishment?",
+      "retrieval": {
+        "expected": [
+          "Briars of Punishment"
+        ],
+        "retrieved": [
+          "Briars of Punishment"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Patch 1.07 altered Briars of Punishment in three ways:\n\n1. **FP cost** – lowered from 13 FP to 9 FP.  \n2. **On‑hit Blood Loss** – increased from 60 to 72.  \n3. **Casting time** – reduced, making the spell quicker to cast.  \n\nThese changes are listed in the spell’s Trivia section.  \n\nSources:  \n- “Briars of Punishment — Trivia” – https://eldenring.fandom.com/wiki/Briars_of_Punishment",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q15",
+      "type": "patch_history",
+      "question": "How did patch 1.07 affect Agheel's Flame in PvP?",
+      "retrieval": {
+        "expected": [
+          "Agheel's Flame"
+        ],
+        "retrieved": [
+          "Agheel's Flame",
+          "Borealis's Mist",
+          "Burn, O Flame!"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "In Patch 1.07 the PvP damage multiplier for Agheel’s Flame was reduced. The spell’s damage against other players was lowered from a 100 % multiplier to 80 %.【Agheel's Flame — Trivia】",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q16",
+      "type": "multi_hop",
+      "question": "Which costs more FP: Eternal Darkness or Blades of Stone?",
+      "retrieval": {
+        "expected": [
+          "Eternal Darkness",
+          "Blades of Stone"
+        ],
+        "retrieved": [
+          "Blades of Stone",
+          "Eternal Darkness"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Eternal Darkness costs more FP.\n\n- **Eternal Darkness**: 25 FP 【Eternal Darkness — Infobox】  \n- **Blades of Stone**: 18 FP 【Blades of Stone — Infobox】\n\n**Sources**\n\n- https://eldenring.fandom.com/wiki/Eternal_Darkness  \n- https://eldenring.fandom.com/wiki/Blades_of_Stone",
+      "search_rounds": 3,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q17",
+      "type": "multi_hop",
+      "question": "Compare the HP of Ancestor Spirit and Cemetery Shade -- which has more?",
+      "retrieval": {
+        "expected": [
+          "Ancestor Spirit",
+          "Cemetery Shade"
+        ],
+        "retrieved": [
+          "Ancestor Spirit",
+          "Cemetery Shade"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Ancestor Spirit HP: 4,393【1†Ancestors Spirit — Stats】  \nCemetery Shade HP: 991 (Gelmir Hero’s Grave)【2†Cemetery Shade — Infobox】\n\n**Which has more?**  \nAncestor Spirit has significantly higher HP than Cemetery Shade.\n\n**Sources**  \n- Ancestor Spirit — Stats: https://eldenring.fandom.com/wiki/Ancestor_Spirit  \n- Cemetery Shade — Infobox: https://eldenring.fandom.com/wiki/Cemetery_Shade",
+      "search_rounds": 3,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q18",
+      "type": "multi_hop",
+      "question": "Which weighs more: Ancestral Spirit's Horn or Ailment Talisman?",
+      "retrieval": {
+        "expected": [
+          "Ancestral Spirit's Horn",
+          "Ailment Talisman"
+        ],
+        "retrieved": [
+          "Ailment Talisman",
+          "Ancestral Spirit's Horn"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Ancestral Spirit’s Horn weighs more.  \n- Ancestral Spirit’s Horn: 1.2 kg【search_wiki 0†title=Ancestral Spirit's Horn — Infobox】  \n- Ailment Talisman: 0.6 kg【search_wiki 1†title=Ailment Talisman — Infobox】\n\n**Sources**  \n- Ancestral Spirit's Horn — Infobox (https://eldenring.fandom.com/wiki/Ancestral_Spirit's_Horn)  \n- Ailment Talisman — Infobox (https://eldenring.fandom.com/wiki/Ailment_Talisman)",
+      "search_rounds": 3,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q19",
+      "type": "out_of_scope",
+      "question": "What is the best armor set for a strength build?",
+      "answer": "I’m sorry, but the indexed corpus does not contain information on armor.",
+      "search_rounds": 1,
+      "correct": true,
+      "expected": "refusal"
+    },
+    {
+      "id": "q20",
+      "type": "out_of_scope",
+      "question": "Where can I find the Ash of War Barbaric Roar?",
+      "answer": "I’m sorry, but the indexed Elden Ring wiki corpus I have access to only includes information about weapons, bosses, talismans, sorceries, and incantations. Details about Ash of War items, such as “Barbaric Roar,” are not included. Therefore, I don’t have a source for that location in this dataset.",
+      "search_rounds": 1,
+      "correct": true,
+      "expected": "refusal"
+    },
+    {
+      "id": "q21",
+      "type": "out_of_scope",
+      "question": "Tell me about Ranni's questline.",
+      "answer": "I’m sorry, but the indexed Elden Ring wiki corpus you’re using does not include information on NPCs, locations, or questlines. Therefore I don’t have any data about Ranni’s questline to provide.",
+      "search_rounds": 1,
+      "correct": true,
+      "expected": "refusal"
+    },
+    {
+      "id": "q22",
+      "type": "out_of_scope",
+      "question": "What are the starting stats of the Vagabond class?",
+      "answer": "I’m sorry, but the indexed corpus does not contain information about character classes, including starting stats for the Vagabond class.",
+      "search_rounds": 1,
+      "correct": true,
+      "expected": "refusal"
+    },
+    {
+      "id": "q23",
+      "type": "out_of_scope",
+      "question": "What's the layout of Stormveil Castle?",
+      "answer": "I’m sorry, but the indexed corpus does not contain information about locations or layout details for places such as Stormveil Castle.",
+      "search_rounds": 1,
+      "correct": true,
+      "expected": "refusal"
+    },
+    {
+      "id": "q24",
+      "type": "adversarial",
+      "question": "What is the FP cost of the spell 'Ancient Death Ritual'?",
+      "answer": "The spell **Ancient Death Ritual** (known on the wiki as *Ancient Death Rancor*) costs **21 FP** to cast.\n\n**Sources**\n\n- “Ancient Death Rancor — Infobox” – FP Cost: 21【2†source=functions.search_wiki†commentary=search_wiki_output=2†response=functions.search_wiki_output†commentary=functions.search_wiki_output】",
+      "search_rounds": 3,
+      "correct": false,
+      "expected": "refusal"
+    },
+    {
+      "id": "q25",
+      "type": "factual",
+      "question": "What type of sorcery is Adula's Moonblade classified as?",
+      "retrieval": {
+        "expected": [
+          "Adula's Moonblade"
+        ],
+        "retrieved": [
+          "Adula's Moonblade",
+          "Ancient Dragons' Lightning Spear"
+        ],
+        "hit_rate": 1.0,
+        "full_hit": true
+      },
+      "answer": "Adula's Moonblade is a **Cold Sorcery** spell.  \n\n**Sources**  \n- *Adula's Moonblade* – “Type: Sorcery (Cold Sorcery)”【1】",
+      "search_rounds": 2,
+      "correct": true,
+      "missing_facts": []
+    },
+    {
+      "id": "q26",
+      "type": "adversarial",
+      "question": "What is the weight of the talisman 'Ancestral Horn'?",
+      "answer": "**Ancestral Spirit’s Horn** – weight: **1.2**\n\n*Source:* Ancestral Spirit's Horn infobox (Elden Ring Wiki) – https://eldenring.fandom.com/wiki/Ancestral_Spirit's_Horn",
+      "search_rounds": 3,
+      "correct": false,
+      "expected": "refusal"
+    },
+    {
+      "id": "q27",
+      "type": "adversarial",
+      "question": "What's the HP of the boss 'Ancestor Spirit's Guardian'?",
+      "answer": "I couldn’t find a boss named “Ancestor Spirit’s Guardian” in the indexed Elden Ring wiki corpus. The searches returned information only for the boss “Ancestor Spirit” itself. Therefore, the HP for “Ancestor Spirit’s Guardian” is not available in this corpus.  \n\nSources:  \n- Search results for “Ancestor Spirit’s Guardian” (no matching boss entry found).",
+      "search_rounds": 3,
+      "correct": true,
+      "expected": "refusal"
+    }
+  ]
+}

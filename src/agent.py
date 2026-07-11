@@ -12,9 +12,10 @@ the system prompt enforces this so faithfulness (see eval/) is measurable.
 """
 import json
 import os
+import time
 
 from dotenv import load_dotenv
-from groq import Groq
+from groq import BadRequestError, Groq
 
 from retrieval import search
 
@@ -43,6 +44,10 @@ retrying rephrased versions of the same query. Tell the user this information do
 to be in the indexed corpus instead.
 - If search results don't contain the answer, say so explicitly instead of filling the gap \
 from memory.
+- Never claim two differently-named things are the same, related, or alternate names for each \
+other unless a search result explicitly states that connection. A similar-sounding name is NOT \
+evidence of a connection -- if you can't find the exact name asked about, say it isn't in the \
+corpus rather than substituting the closest match you did find.
 - Cite your sources: after each claim, note which page it came from (the tool results include \
 titles and URLs). End your answer with a "Sources:" list of the page titles and URLs you used.
 - Be concise and factual -- this is a game-mechanics reference tool, not a conversation."""
@@ -72,6 +77,33 @@ TOOLS = [
 ]
 
 
+TOOL_CALL_RETRY_ATTEMPTS = 3
+
+
+def _create_completion(client: Groq, **kwargs):
+    """Wraps chat.completions.create with retries for tool_use_failed.
+
+    Found via eval: openai/gpt-oss-20b occasionally leaks an internal
+    format token into the generated tool name (e.g.
+    "search_wiki<|channel|>commentary"), which Groq's tool-call validator
+    rejects outright as a 400. This is a sampling-level glitch, not a
+    deterministic one -- retrying the same request with fresh sampling
+    succeeds the great majority of the time, so we retry a few times
+    before giving up rather than failing the whole question on one bad
+    generation.
+    """
+    last_error = None
+    for attempt in range(TOOL_CALL_RETRY_ATTEMPTS):
+        try:
+            return client.chat.completions.create(**kwargs)
+        except BadRequestError as e:
+            if "tool_use_failed" not in str(e):
+                raise
+            last_error = e
+            time.sleep(0.5 * (attempt + 1))
+    raise last_error
+
+
 def _run_search_wiki(query: str) -> str:
     results = search(query, k=5)
     if not results:
@@ -98,8 +130,8 @@ def ask(question: str, verbose: bool = False) -> dict:
     search_trace: list[dict] = []
 
     for round_num in range(MAX_TOOL_ROUNDS):
-        response = client.chat.completions.create(
-            model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto",
+        response = _create_completion(
+            client, model=MODEL, messages=messages, tools=TOOLS, tool_choice="auto",
         )
         msg = response.choices[0].message
 
@@ -126,7 +158,7 @@ def ask(question: str, verbose: bool = False) -> dict:
     # isn't in the request, which it readily does given the tool-call-heavy
     # history at this point.
     messages.append({"role": "user", "content": "Stop searching. Based only on what you've found so far, either answer now or say the information isn't in the indexed corpus."})
-    response = client.chat.completions.create(model=MODEL, messages=messages, tools=TOOLS, tool_choice="none")
+    response = _create_completion(client, model=MODEL, messages=messages, tools=TOOLS, tool_choice="none")
     return {"answer": response.choices[0].message.content, "search_trace": search_trace, "rounds": MAX_TOOL_ROUNDS}
 
 
