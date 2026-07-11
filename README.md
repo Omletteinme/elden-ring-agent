@@ -11,7 +11,7 @@ Most "chat with your docs" projects skip measurement. This one is built around a
 ```
 Wiki pages (scraped) → clean + chunk → embed → vector store
                                                       ↑
-User question → Agent (Groq/Llama) → decides: answer directly, or call search_wiki tool (maybe more than once)
+React chat UI → FastAPI /chat → Agent (Groq) → decides: answer directly, or call search_wiki tool (maybe more than once)
                                                       ↓
                                         Answer with citations to source chunks
 ```
@@ -39,7 +39,7 @@ Building phase by phase — see progress below.
 - [x] Phase 3 — Embed + vector store (Chroma + BM25 hybrid retrieval, fused via RRF)
 - [x] Phase 4 — Agent loop with tool-calling (Groq `openai/gpt-oss-20b`, multi-hop search)
 - [x] Phase 5 — Eval harness (27 questions, see results below)
-- [ ] Phase 6 — Frontend + deploy
+- [x] Phase 6 — Frontend + backend, running locally end-to-end (cloud deploy: not yet, see below)
 
 ## Eval results
 
@@ -68,17 +68,38 @@ python -m venv venv
 venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 cp .env.example .env    # add your GROQ_API_KEY
+
+# one-time: build the corpus (or skip -- data/ is already committed)
+python scripts/scrape_wiki.py
+python src/chunking.py
+python src/index.py
 ```
+
+## Running it
+
+```bash
+# backend (from src/)
+cd src && uvicorn api:app --port 8000 --reload
+
+# frontend (from frontend/), in a separate terminal
+cd frontend && npm install && npm run dev
+```
+
+Open the frontend's local URL (Vite prints it, typically `http://localhost:5173`). The backend must be running on port 8000 for the chat to work (`API_URL` in `frontend/src/App.jsx`).
+
+**Not done yet: cloud deployment.** The app runs locally end-to-end (verified) but isn't deployed anywhere public. Deploying means creating accounts on a hosting provider (e.g. Render for the backend, Vercel for the frontend) and connecting them to this repo -- account creation and external service setup, so that's a deliberate choice to leave for you to do rather than something to do on your behalf. Render + Vercel both have straightforward free tiers if you want to do this next.
+
+**Also not done: token streaming.** The agent loop runs to completion (including all tool-call rounds) before the API responds, so the frontend shows a "Searching and thinking…" state rather than streaming tokens in. Restructuring the tool-calling loop to yield partial output mid-round is real additional work; noted here rather than silently skipped.
 
 ## Project structure
 
 ```
 data/
-  raw/      # scraped wiki HTML (gitignored)
-  clean/    # cleaned text
-  chunks/   # chunked + metadata, ready to embed
-src/        # application code (chunking, embedding, agent, API)
-scripts/    # one-off scripts (scraping, robots check, indexing)
-eval/       # hand-written QA set + eval runner
-tests/
+  raw/      # scraped wiki HTML (150 pages, committed)
+  chunks/   # chunked + metadata (882 chunks, committed)
+  chroma/   # vector store (gitignored, rebuild with src/index.py)
+src/        # application code: chunking, indexing, retrieval, agent, FastAPI backend
+scripts/    # one-off scripts (scraping, robots check)
+eval/       # hand-written QA set + eval runner + results
+frontend/   # React (Vite) chat UI
 ```
