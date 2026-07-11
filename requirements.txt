@@ -9,4 +9,5 @@ groq
 python-dotenv
 fastapi
 uvicorn[standard]
+gradio
 pytest

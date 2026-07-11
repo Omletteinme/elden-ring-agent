@@ -3,8 +3,9 @@ title: Elden Ring Agent
 emoji: ⚔️
 colorFrom: yellow
 colorTo: gray
-sdk: docker
-app_port: 7860
+sdk: gradio
+sdk_version: 6.20.0
+app_file: app.py
 pinned: false
 ---
 
@@ -38,6 +39,7 @@ React chat UI → FastAPI /chat → Agent (Groq) → decides: answer directly, o
 - **MediaWiki API over scraping rendered pages.** Fextralife (the more detailed wiki) was down; Fandom's Cloudflare bot-management fingerprinted and blocked Python's `requests` client specifically on the rendered `/wiki/` route (identical headers worked via curl — a TLS/client fingerprinting issue, not a missing header). Rather than chase that with spoofed fingerprints or client-swapping, switched to Fandom's `api.php`, which `robots.txt` explicitly allowlists for all crawlers and returns clean article-body HTML with no site chrome to strip.
 - **Title-aware boosting in retrieval.** A query mixing an entity name with a topic keyword (e.g. "Ancient Death Rancor patch") lost to *other* pages' more keyword-dense chunks — the correct page's own relevant chunk ranked 13th. Fixed by boosting any chunk whose title appears in the query, confirmed against the failing case.
 - **Model choice for tool-calling.** `llama-3.3-70b-versatile` produced malformed tool-call syntax on this schema; `openai/gpt-oss-20b` handles it reliably, with one caveat below.
+- **Gradio SDK, not Docker SDK, for the Hugging Face Spaces deploy.** Docker SDK requires a paid plan on this account. `app.py` at the repo root mounts the real FastAPI app (`src/api.py`, unchanged) onto a minimal Gradio page via `gr.mount_gradio_app` -- `/chat` and `/health` work exactly as before, verified locally; the Gradio page only exists to satisfy HF's free-tier SDK requirement.
 
 ## Status
 
