@@ -1,41 +1,50 @@
 """HF Spaces entry point (Gradio SDK).
 
-Docker SDK on Hugging Face Spaces requires a paid plan on this account;
-CPU Basic hardware does too (on this account, as of this deploy). ZeroGPU
-is the free tier that's actually available, but it requires at least one
-function decorated with @spaces.GPU to exist at startup -- without one,
-the platform's ZeroGPU wrapper fails to initialize and reports "No
-@spaces.GPU function detected", which also produced a port 7860
-double-bind against our own uvicorn.run() below.
+Docker SDK and CPU Basic hardware both require a paid plan on this
+account; ZeroGPU is the only free tier available for Gradio SDK Spaces
+here. ZeroGPU's function-registration hook is implemented by monkey-
+patching gr.Blocks.launch() itself (spaces/zero/gradio.py's `one_launch`
+wraps gr.Blocks.launch to run a registration task before the real
+launch) -- it only fires if .launch() is actually called.
 
-_unused_gpu_placeholder exists ONLY to satisfy that startup check. It is
-never invoked by real users -- this app is entirely CPU-bound (local
-sentence-transformers embeddings; the actual LLM calls go to Groq's
-remote API, not a local GPU) and doesn't need or use a GPU at all.
+Three earlier attempts, in order:
+  1. gr.mount_gradio_app() + manual uvicorn.run() (Gradio's own documented
+     pattern for embedding a UI in a larger FastAPI app) never calls
+     .launch() at all, so the hook never fires -- failed with "No
+     @spaces.GPU function detected" (confirmed not a stale build by
+     checking the Space's Files tab and forcing a manual restart).
+  2. Same, but with the @spaces.GPU function properly wired to a Gradio
+     event handler instead of standalone -- same failure, confirming the
+     issue was .launch() never being called, not the decorator wiring.
+  3. Called demo.launch() for real and attached our routes onto
+     demo.app (gradio.routes.App, a FastAPI subclass) -- the hook fired,
+     but Gradio's own catch-all route (registered at Blocks construction,
+     serving its UI/assets at "/") intercepted /health and /chat before
+     they reached our handlers, and reordering demo.app.routes didn't
+     fix it either (FastAPI's include_router() wraps included routes in
+     an internal object, not flat matchable Route entries the way a
+     naive list-reorder assumes).
 
-First attempt at this fix defined the decorated function standalone,
-disconnected from the Gradio UI -- still failed with the identical
-error. ZeroGPU's scanner apparently checks for a @spaces.GPU function
-that's actually *registered as a Gradio event handler* (wired to a
-component), not merely present somewhere in the file. So it's wired to a
-hidden button below, which is never shown to or clicked by real users --
-this app is entirely CPU-bound and doesn't need or use a GPU at all.
-
-Gradio SDK is free (once ZeroGPU is satisfied). Gradio apps are FastAPI
-apps under the hood (gr.mount_gradio_app returns the combined app), so
-this mounts our real /chat and /health API (src/api.py, unchanged)
-alongside a minimal informational Gradio page -- the API contract the
-React frontend expects doesn't change at all, this file only exists to
-satisfy HF's "must be a Gradio app" requirement for the free tier.
+This version sidesteps the routing fight entirely: Gradio launches on a
+throwaway internal-only port purely to trigger the ZeroGPU registration
+hook (confirmed via spaces/zero/gradio.py that the hook is an out-of-
+band call, not tied to which port Gradio's own server binds), and our
+real, completely unmodified API (src/api.py's `app`, identical to what
+already worked in local Docker testing) serves the actual exposed port.
+The two never share a routing table, so there's nothing left to conflict.
 """
 import sys
 from pathlib import Path
 
 import gradio as gr
 import spaces
+import uvicorn
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 from api import app as fastapi_app  # noqa: E402
+
+EXTERNAL_PORT = 7860
+GRADIO_INTERNAL_PORT = 7861
 
 
 @spaces.GPU
@@ -43,30 +52,23 @@ def _unused_gpu_placeholder():
     return "unused"
 
 
-with gr.Blocks(title="Elden Ring Agent") as demo:
-    gr.Markdown(
-        """
-        # Elden Ring Agent -- backend
-
-        This Space hosts the API for the Elden Ring Agent project.
-        It isn't meant to be used from this page -- the chat UI is a
-        separate React frontend that calls this Space's `/chat` endpoint.
-
-        - `GET /health`
-        - `POST /chat` -- `{"question": "..."}`
-
-        Source: https://github.com/Omletteinme/elden-ring-agent
-        """
-    )
-    # hidden -- exists only so @spaces.GPU is wired to a real Gradio event
-    # handler, which is what ZeroGPU's startup scanner actually checks for
+with gr.Blocks(title="Elden Ring Agent (internal)") as demo:
+    gr.Markdown("Internal Gradio instance -- exists only to satisfy ZeroGPU's registration hook, not user-facing.")
     with gr.Row(visible=False):
         _gpu_trigger = gr.Button()
         _gpu_output = gr.Textbox()
         _gpu_trigger.click(fn=_unused_gpu_placeholder, outputs=_gpu_output)
 
-app = gr.mount_gradio_app(fastapi_app, demo, path="/")
+
+def _run_gradio_for_zerogpu_registration():
+    demo.launch(
+        server_name="127.0.0.1",
+        server_port=GRADIO_INTERNAL_PORT,
+        prevent_thread_lock=True,
+        quiet=True,
+    )
+
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=7860)
+    _run_gradio_for_zerogpu_registration()
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=EXTERNAL_PORT)

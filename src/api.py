@@ -8,7 +8,7 @@ behavior. Noted as a follow-up in the README rather than silently skipped.
 """
 import re
 
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -23,14 +23,14 @@ _CITATION_MARKER_RE = re.compile(r"【[^】]*】")
 def _clean_answer(text: str) -> str:
     return _CITATION_MARKER_RE.sub("", text).strip()
 
-app = FastAPI(title="Elden Ring Agent API")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # local portfolio project, not handling sensitive data
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# a router, not a full FastAPI app, so it can be mounted either on its own
+# standalone app (local dev, below) or included into Gradio's own app on
+# HF Spaces (see app.py at the repo root -- ZeroGPU's registration hook
+# only fires on gr.Blocks.launch(), which our own uvicorn-served app never
+# calls, so the HF deploy runs Gradio's app directly and borrows its routes
+# rather than the other way around).
+router = APIRouter()
 
 
 class ChatRequest(BaseModel):
@@ -43,7 +43,7 @@ class ChatResponse(BaseModel):
     rounds: int
 
 
-@app.post("/chat", response_model=ChatResponse)
+@router.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest):
     if not req.question.strip():
         raise HTTPException(status_code=400, detail="question must not be empty")
@@ -51,6 +51,17 @@ def chat(req: ChatRequest):
     return ChatResponse(answer=_clean_answer(result["answer"] or ""), search_trace=result["search_trace"], rounds=result["rounds"])
 
 
-@app.get("/health")
+@router.get("/health")
 def health():
     return {"status": "ok"}
+
+
+# standalone app for local dev: `uvicorn api:app --port 8000 --reload`
+app = FastAPI(title="Elden Ring Agent API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # local portfolio project, not handling sensitive data
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+app.include_router(router)
