@@ -3,7 +3,6 @@ __pycache__/
 .venv/
 venv/
 .env
-data/raw/*.html
 data/chroma/
 node_modules/
 dist/

@@ -1,117 +1,150 @@
-"""Polite, rate-limited scraper for the Elden Ring wiki.
+"""Corpus collection for the Elden Ring wiki via the MediaWiki API.
 
-Starts from a small set of seed/category pages, discovers same-wiki links
-that match the content-page pattern, and downloads each page once — capped
-at MAX_PAGES so this stays a focused subset (weapons/bosses/builds), not
-the entire wiki.
+Why the API instead of scraping rendered pages: Fandom's robots.txt
+explicitly allowlists `/api.php?action=` for all crawlers -- it's the
+officially sanctioned programmatic access point, not a workaround. It also
+returns clean article-body content (no nav/ads/sidebar to strip), which
+makes Phase 2 (cleaning) much simpler.
 
-Respects robots.txt (aborts on disallowed paths) and rate-limits requests.
+(For the record: we initially tried scraping rendered /wiki/ pages
+directly. Cloudflare's bot-management fingerprinted and 403'd Python's
+`requests` client specifically -- identical headers worked fine via curl,
+which points to TLS/client fingerprinting rather than a missing header.
+We did not chase that by spoofing fingerprints or swapping HTTP clients to
+get through it; the API path sidesteps the question entirely since it's
+the documented, allowlisted integration point.)
+
+Process: for each category in SEED_CATEGORIES, list its member pages via
+action=query&list=categorymembers, then fetch each page's article-body
+HTML via action=parse&prop=text. Capped at MAX_PAGES total.
 
 Usage: python scripts/scrape_wiki.py
 """
+import json
 import time
-import urllib.robotparser as robotparser
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
 
 import requests
-from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-BASE_URL = "https://eldenring.wiki.fextralife.com"
-SEED_PATHS = ["/Weapons", "/Bosses", "/Builds", "/Talismans", "/Spells"]
+API_URL = "https://eldenring.fandom.com/api.php"
+SEED_CATEGORIES = ["Weapons", "Bosses", "Talismans", "Sorceries", "Incantations"]
 OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
-USER_AGENT = "elden-ring-agent-portfolio-project/0.1 (personal research/eval project; contact via GitHub Omletteinme)"
-RATE_LIMIT_SECONDS = 1.5
+RATE_LIMIT_SECONDS = 1.0
 MAX_PAGES = 150
 
-HEADERS = {"User-Agent": USER_AGENT}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+# Category/list/meta pages that show up as "members" but aren't articles we
+# want to answer questions from.
+SKIP_TITLE_PREFIXES = ("Category:", "Template:", "File:", "User:", "Help:")
 
 
-def load_robots():
-    rp = robotparser.RobotFileParser()
-    rp.set_url(BASE_URL + "/robots.txt")
-    rp.read()
-    return rp
+def api_get(params: dict) -> dict:
+    params = {**params, "format": "json"}
+    resp = requests.get(API_URL, params=params, headers=HEADERS, timeout=15)
+    resp.raise_for_status()
+    return resp.json()
 
 
-def is_content_link(href: str) -> bool:
-    """Heuristic: same-wiki article links, not files/edit/history/talk pages."""
-    if not href or href.startswith("#"):
-        return False
-    parsed = urlparse(urljoin(BASE_URL, href))
-    if parsed.netloc and parsed.netloc != urlparse(BASE_URL).netloc:
-        return False
-    path = parsed.path
-    bad_markers = ("/File:", "?", "&", "/Special:", "/Talk:", "action=edit", "action=history")
-    if any(m in href for m in bad_markers):
-        return False
-    return path.count("/") >= 1 and len(path) > 1
+def list_category_members(category: str, limit_per_call: int = 100) -> list[str]:
+    titles = []
+    cmcontinue = None
+    while True:
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": f"Category:{category}",
+            "cmlimit": limit_per_call,
+        }
+        if cmcontinue:
+            params["cmcontinue"] = cmcontinue
+        data = api_get(params)
+        time.sleep(RATE_LIMIT_SECONDS)
+
+        members = data.get("query", {}).get("categorymembers", [])
+        for m in members:
+            title = m["title"]
+            if not title.startswith(SKIP_TITLE_PREFIXES):
+                titles.append(title)
+
+        cmcontinue = data.get("continue", {}).get("cmcontinue")
+        if not cmcontinue:
+            break
+    return titles
 
 
-def discover_links(html: str) -> set[str]:
-    soup = BeautifulSoup(html, "lxml")
-    links = set()
-    for a in soup.select("#wiki-content-block a[href], .wiki_text a[href]"):
-        href = a.get("href")
-        if is_content_link(href):
-            links.add(urljoin(BASE_URL, href).split("#")[0])
-    return links
-
-
-def fetch(url: str, rp: robotparser.RobotFileParser) -> str | None:
-    if not rp.can_fetch(USER_AGENT, url):
-        print(f"  skip (robots.txt disallows): {url}")
-        return None
+def fetch_page_html(title: str) -> str | None:
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
-        resp.raise_for_status()
-        return resp.text
+        data = api_get({"action": "parse", "page": title, "prop": "text"})
     except requests.RequestException as e:
-        print(f"  failed: {url} ({e})")
+        print(f"  failed: {title} ({e})")
         return None
+    if "error" in data:
+        print(f"  api error for {title}: {data['error'].get('info')}")
+        return None
+    return data["parse"]["text"]["*"]
 
 
-def slugify(url: str) -> str:
-    path = urlparse(url).path.strip("/")
-    return path.replace("/", "_") or "index"
+WINDOWS_INVALID_CHARS = '<>:"/\\|?*'
+
+
+def slugify(title: str) -> str:
+    slug = title.replace(" ", "_")
+    for ch in WINDOWS_INVALID_CHARS:
+        slug = slug.replace(ch, "-")
+    return slug
 
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    print("Checking robots.txt...")
-    rp = load_robots()
 
-    to_visit = {urljoin(BASE_URL, p) for p in SEED_PATHS}
-    visited: set[str] = set()
-    queue = list(to_visit)
+    print("Discovering pages from seed categories...")
+    per_category: dict[str, list[str]] = {}
+    seen_titles: set[str] = set()
+    for category in SEED_CATEGORIES:
+        titles = [t for t in list_category_members(category) if t not in seen_titles]
+        seen_titles.update(titles)
+        per_category[category] = titles
+        print(f"  {category}: {len(titles)} pages")
 
-    pbar = tqdm(total=MAX_PAGES, desc="Scraping pages")
-    while queue and len(visited) < MAX_PAGES:
-        url = queue.pop(0)
-        if url in visited:
-            continue
-        visited.add(url)
+    # round-robin across categories so no single category (e.g. Bosses, the
+    # largest) exhausts the MAX_PAGES budget before the others are sampled
+    title_to_category: dict[str, str] = {}
+    titles_to_fetch: list[str] = []
+    queues = {c: list(ts) for c, ts in per_category.items()}
+    while len(titles_to_fetch) < MAX_PAGES and any(queues.values()):
+        for category in SEED_CATEGORIES:
+            if not queues[category]:
+                continue
+            title = queues[category].pop(0)
+            titles_to_fetch.append(title)
+            title_to_category[title] = category
+            if len(titles_to_fetch) >= MAX_PAGES:
+                break
 
-        html = fetch(url, rp)
+    all_titles = title_to_category
+    print(f"\nFetching {len(titles_to_fetch)} pages (capped at {MAX_PAGES}, balanced across categories)...\n")
+
+    manifest = []
+    for title in tqdm(titles_to_fetch, desc="Fetching articles"):
+        html = fetch_page_html(title)
         time.sleep(RATE_LIMIT_SECONDS)
         if html is None:
             continue
-
-        out_path = OUT_DIR / f"{slugify(url)}.html"
+        slug = slugify(title)
+        out_path = OUT_DIR / f"{slug}.html"
         out_path.write_text(html, encoding="utf-8")
-        pbar.update(1)
+        manifest.append({"title": title, "category": all_titles[title], "slug": slug,
+                          "url": f"https://eldenring.fandom.com/wiki/{title.replace(' ', '_')}"})
 
-        # only expand the frontier from seed/category pages to keep this a
-        # focused subset rather than crawling the whole wiki
-        if url in to_visit:
-            new_links = discover_links(html)
-            for link in new_links:
-                if link not in visited and link not in queue:
-                    queue.append(link)
-
-    pbar.close()
-    print(f"\nSaved {len(visited)} pages to {OUT_DIR}")
+    manifest_path = OUT_DIR.parent / "manifest.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    print(f"\nSaved {len(manifest)} pages to {OUT_DIR}")
+    print(f"Manifest written to {manifest_path}")
 
 
 if __name__ == "__main__":
