@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+lxml
+tqdm
+sentence-transformers
+chromadb
+groq
+python-dotenv
+fastapi
+uvicorn[standard]
+pytest
