@@ -4,6 +4,7 @@ lxml
 tqdm
 sentence-transformers
 chromadb
+rank_bm25
 groq
 python-dotenv
 fastapi

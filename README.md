@@ -1,3 +1,13 @@
+---
+title: Elden Ring Agent
+emoji: ⚔️
+colorFrom: yellow
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Elden Ring Agent
 
 An agent that answers Elden Ring questions by searching a real, current wiki corpus — not from an LLM's training data — and cites its sources. Built as an agentic tool-use system (not a static RAG pipeline): the agent decides when and what to search, and can make multiple search calls for questions that span multiple pages (e.g. "how has X changed").

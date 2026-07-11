@@ -1,0 +1,14 @@
+frontend/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.git/
+.env
+data/raw/
+data/chroma/
+data/chunks/bm25.pkl
+eval/
+scripts/
+tests/
+node_modules/
