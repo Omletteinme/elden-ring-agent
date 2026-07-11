@@ -10,4 +10,5 @@ python-dotenv
 fastapi
 uvicorn[standard]
 gradio
+spaces
 pytest
