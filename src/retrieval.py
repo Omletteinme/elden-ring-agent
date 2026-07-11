@@ -38,7 +38,17 @@ TITLE_BOOST = 0.05
 
 @lru_cache(maxsize=1)
 def _get_model() -> SentenceTransformer:
-    return SentenceTransformer(EMBEDDING_MODEL)
+    # explicit device="cpu": on HF Spaces' ZeroGPU hardware, the `spaces`
+    # package globally patches torch's CUDA init to raise unless it's
+    # called from inside an @spaces.GPU-wrapped function (ZeroGPU only
+    # grants GPU access transiently, scoped to those calls). Without this,
+    # SentenceTransformer's default device auto-detection tries CUDA
+    # (since ZeroGPU hardware nominally has one) and trips that guard --
+    # confirmed via a live traceback: "RuntimeError: Low-level CUDA init
+    # ... did not intercept a CUDA operation". This app never needs a GPU
+    # at all (embeddings are cheap enough for CPU; the actual LLM calls go
+    # to Groq's remote API), so forcing CPU avoids the CUDA path entirely.
+    return SentenceTransformer(EMBEDDING_MODEL, device="cpu")
 
 
 @lru_cache(maxsize=1)

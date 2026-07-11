@@ -33,7 +33,9 @@ def load_chunks() -> list[dict]:
 
 def build_vector_index(chunks: list[dict]) -> None:
     print(f"Loading embedding model ({EMBEDDING_MODEL})...")
-    model = SentenceTransformer(EMBEDDING_MODEL)
+    # explicit device="cpu" -- see the matching comment in retrieval.py's
+    # _get_model() for why (ZeroGPU's global CUDA-init guard on HF Spaces)
+    model = SentenceTransformer(EMBEDDING_MODEL, device="cpu")
 
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     try:
