@@ -210,12 +210,18 @@ def process_page(html: str, title: str, category: str, url: str) -> list[Chunk]:
 
     _remove_trailing_navbox(root)
 
+    # page-level counter, not per-section: two sections can legitimately
+    # share a name (e.g. our "Overview" default bucket colliding with an
+    # actual heading also titled "Overview"), which would otherwise both
+    # restart at chunk index 0 and produce duplicate ids
+    chunk_num = 1
     for section_name, section_text in extract_sections(soup):
-        for i, piece in enumerate(split_into_chunks(section_text)):
+        for piece in split_into_chunks(section_text):
             chunks.append(Chunk(
-                id=f"{title}::{section_name}::{i}", title=title, category=category,
+                id=f"{title}::{chunk_num}", title=title, category=category,
                 url=url, section=section_name, text=piece,
             ))
+            chunk_num += 1
 
     return chunks
 
