@@ -52,12 +52,17 @@ function App() {
         body: JSON.stringify({ question }),
       })
       if (!res.ok) {
+        // the backend responded (just with an error status) -- show its
+        // message as-is rather than the network-failure hint below, which
+        // would be misleading here (the backend clearly is running)
         const err = await res.json().catch(() => ({}))
-        throw new Error(err.detail || `Request failed (${res.status})`)
+        setMessages((m) => [...m, { role: 'agent', content: err.detail || `Request failed (${res.status})`, isError: true }])
+        return
       }
       const data = await res.json()
       setMessages((m) => [...m, { role: 'agent', content: data.answer, searchTrace: data.search_trace }])
     } catch (e) {
+      // fetch itself threw -- a real network-level failure (backend unreachable, CORS, etc.)
       setMessages((m) => [...m, { role: 'agent', content: `Something went wrong: ${e.message}. Is the backend running on ${API_URL}?`, isError: true }])
     } finally {
       setLoading(false)

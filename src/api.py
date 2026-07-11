@@ -10,6 +10,7 @@ import re
 
 from fastapi import APIRouter, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from groq import RateLimitError
 from pydantic import BaseModel
 
 from agent import ask
@@ -47,7 +48,16 @@ class ChatResponse(BaseModel):
 def chat(req: ChatRequest):
     if not req.question.strip():
         raise HTTPException(status_code=400, detail="question must not be empty")
-    result = ask(req.question)
+    try:
+        result = ask(req.question)
+    except RateLimitError:
+        # Groq's free tier has a daily token quota (not per-minute) --
+        # hitting it is expected under heavy testing/demo traffic, not a
+        # bug. Surface it as a clean 503 instead of a raw 500 traceback.
+        raise HTTPException(
+            status_code=503,
+            detail="The AI provider's rate limit was reached. This resets daily -- please try again in a few minutes.",
+        )
     return ChatResponse(answer=_clean_answer(result["answer"] or ""), search_trace=result["search_trace"], rounds=result["rounds"])
 
 
