@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "raw-corpus-viewer",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8420", "--directory", "C:/Users/jeevi/Desktop/elden-ring-agent/data/raw"],
+      "port": 8420
+    }
+  ]
+}
