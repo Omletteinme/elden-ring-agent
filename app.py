@@ -32,6 +32,16 @@ band call, not tied to which port Gradio's own server binds), and our
 real, completely unmodified API (src/api.py's `app`, identical to what
 already worked in local Docker testing) serves the actual exposed port.
 The two never share a routing table, so there's nothing left to conflict.
+
+/chat 500'd on the first live deploy of this version even though /health
+worked: the Docker deploy path (abandoned for the ZeroGPU/Gradio path
+above) had an explicit `RUN python index.py` build step that rebuilt the
+vector store + BM25 index from the committed chunks.jsonl; this Gradio
+SDK path has no equivalent build phase, so data/chroma/ and bm25.pkl
+(both gitignored -- regeneratable, not committed) never got created at
+all, and retrieval.py's first real query crashed trying to open them.
+Building them at import time here, guarded so a restart doesn't rebuild
+unnecessarily.
 """
 import sys
 from pathlib import Path
@@ -41,7 +51,14 @@ import spaces
 import uvicorn
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+import index as index_builder  # noqa: E402
 from api import app as fastapi_app  # noqa: E402
+
+if not index_builder.CHROMA_DIR.exists() or not index_builder.BM25_PATH.exists():
+    print("Vector/keyword index not found -- building from committed chunks.jsonl...")
+    index_builder.main()
+else:
+    print("Vector/keyword index already present, skipping build.")
 
 EXTERNAL_PORT = 7860
 GRADIO_INTERNAL_PORT = 7861
