@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 from groq import BadRequestError, Groq
 
 from retrieval import search
+from recommend import recommend_weapons
 
 load_dotenv()
 
@@ -32,6 +33,16 @@ The indexed corpus ONLY covers: Weapons, Bosses, Talismans, Sorceries, and Incan
 does NOT include Armor, Ashes of War, NPCs, Locations, or Classes. If a question is about a \
 topic outside this list, say directly that it isn't in the indexed corpus -- do not search \
 for it at all.
+
+Recommendation / "best X for a Y build" questions:
+- For WEAPONS ("best weapon for a strength build", "a good dexterity weapon"), use the \
+recommend_weapons tool with the relevant attribute -- it returns a properly ranked list by \
+scaling grade, which plain search cannot. Present the top few it returns, with their scaling \
+grade and requirement, and note these are ranked from the weapons in the indexed corpus.
+- For SPELLS ("a good sorcery for an INT build"), use search_wiki (e.g. "intelligence sorcery") \
+and recommend from what you retrieve, citing each spell's attribute requirement and effect.
+- Either way, only recommend items that actually came back from a tool; never pull a \
+recommendation from memory, and don't imply the list is exhaustive of the whole game.
 
 Rules:
 - Always call search_wiki before answering a factual question, even if you think you know \
@@ -73,7 +84,31 @@ TOOLS = [
                 "required": ["query"],
             },
         },
-    }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "recommend_weapons",
+            "description": (
+                "Rank the indexed weapons by how well they scale with a given attribute, best "
+                "first. Use this for build-recommendation questions like 'best weapon for a "
+                "strength build' or 'a good dexterity weapon' -- it returns a properly ranked "
+                "list (by scaling grade S>A>B>C>D>E) with each weapon's requirement, which "
+                "plain search cannot do. Returns only weapons actually in the indexed corpus."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "attribute": {
+                        "type": "string",
+                        "description": "One of: Strength, Dexterity, Intelligence, Faith, Arcane.",
+                        "enum": ["Strength", "Dexterity", "Intelligence", "Faith", "Arcane"],
+                    }
+                },
+                "required": ["attribute"],
+            },
+        },
+    },
 ]
 
 
@@ -105,13 +140,27 @@ def _create_completion(client: Groq, **kwargs):
 
 
 def _run_search_wiki(query: str) -> str:
-    results = search(query, k=5)
+    # k=8 (not 5): recommendation-style questions ("best weapon for a
+    # strength build") need several candidates to reason over, not just the
+    # single best match; factual questions still get the top hit first.
+    results = search(query, k=8)
     if not results:
         return "No results found."
     lines = []
     for r in results:
         lines.append(f"[{r['title']} — {r['section']}] {r['text']}\nSource: {r['url']}")
     return "\n\n".join(lines)
+
+
+def _run_recommend_weapons(attribute: str) -> str:
+    results = recommend_weapons(attribute, limit=8)
+    if not results:
+        return f"No weapons scaling with '{attribute}' found in the indexed corpus. Valid attributes: Strength, Dexterity, Intelligence, Faith, Arcane."
+    lines = [f"Top {results[0]['attribute']}-scaling weapons in the indexed corpus (best first):"]
+    for r in results:
+        req = f", requires {r['attribute']} {r['requirement']}" if r["requirement"] else ""
+        lines.append(f"- {r['title']}: {r['attribute']} scaling {r['scaling_grade']}{req}. Source: {r['url']}")
+    return "\n".join(lines)
 
 
 def ask(question: str, verbose: bool = False) -> dict:
@@ -145,11 +194,19 @@ def ask(question: str, verbose: bool = False) -> dict:
 
         for tc in msg.tool_calls:
             args = json.loads(tc.function.arguments)
-            query = args.get("query", "")
-            if verbose:
-                print(f"  [tool call] search_wiki({query!r})")
-            result_text = _run_search_wiki(query)
-            search_trace.append({"query": query, "result_preview": result_text[:200]})
+            name = tc.function.name
+            if name == "recommend_weapons":
+                attribute = args.get("attribute", "")
+                if verbose:
+                    print(f"  [tool call] recommend_weapons({attribute!r})")
+                result_text = _run_recommend_weapons(attribute)
+                search_trace.append({"query": f"recommend_weapons: {attribute}", "result_preview": result_text[:200]})
+            else:  # search_wiki (default)
+                query = args.get("query", "")
+                if verbose:
+                    print(f"  [tool call] search_wiki({query!r})")
+                result_text = _run_search_wiki(query)
+                search_trace.append({"query": query, "result_preview": result_text[:200]})
             messages.append({"role": "tool", "tool_call_id": tc.id, "content": result_text})
 
     # ran out of rounds -- force a final answer from what's been gathered so far.

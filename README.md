@@ -13,6 +13,8 @@ pinned: false
 
 An agent that answers Elden Ring questions by searching a real, current wiki corpus — not from an LLM's training data — and cites its sources. Built as an agentic tool-use system (not a static RAG pipeline): the agent decides when and what to search, and can make multiple search calls for questions that span multiple pages (e.g. "how has X changed").
 
+It handles three kinds of questions: **factual lookups** ("what's the FP cost of X"), **comparisons** ("which weighs more, X or Y"), and **build recommendations** ("suggest a weapon for a strength build") — grounded in the actual attribute-requirement and scaling data indexed for each weapon/spell, and honest about the limits of what's in the corpus.
+
 ## Why this exists
 
 Most "chat with your docs" projects skip measurement. This one is built around an eval harness from day one: every retrieval and every answer is checked against hand-verified ground truth, and the results (including failures) are reported here, not hidden.

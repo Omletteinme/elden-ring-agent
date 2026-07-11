@@ -4,8 +4,8 @@ import './App.css'
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 const EXAMPLE_QUESTIONS = [
+  'Suggest a good weapon for a strength build',
   'What is the FP cost of Ancient Death Rancor?',
-  'Compare the HP of Ancestor Spirit and Cemetery Shade',
   'How was Ancient Death Rancor changed in patch updates?',
   'What is the best armor set for a strength build?',
 ]

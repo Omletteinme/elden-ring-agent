@@ -1,393 +1,987 @@
 [
   {
-    "title": "Weapons",
+    "title": "Battle Axe",
     "category": "Weapons",
-    "slug": "Weapons",
-    "url": "https://eldenring.fandom.com/wiki/Weapons"
+    "slug": "Battle_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Battle_Axe"
   },
   {
-    "title": "Bosses",
-    "category": "Bosses",
-    "slug": "Bosses",
-    "url": "https://eldenring.fandom.com/wiki/Bosses"
-  },
-  {
-    "title": "Talismans",
-    "category": "Talismans",
-    "slug": "Talismans",
-    "url": "https://eldenring.fandom.com/wiki/Talismans"
-  },
-  {
-    "title": "Sorceries",
-    "category": "Sorceries",
-    "slug": "Sorceries",
-    "url": "https://eldenring.fandom.com/wiki/Sorceries"
-  },
-  {
-    "title": "Incantations",
-    "category": "Incantations",
-    "slug": "Incantations",
-    "url": "https://eldenring.fandom.com/wiki/Incantations"
-  },
-  {
-    "title": "Melee Armaments",
+    "title": "Celebrant's Cleaver",
     "category": "Weapons",
-    "slug": "Melee_Armaments",
-    "url": "https://eldenring.fandom.com/wiki/Melee_Armaments"
+    "slug": "Celebrant's_Cleaver",
+    "url": "https://eldenring.fandom.com/wiki/Celebrant's_Cleaver"
   },
   {
-    "title": "Bosses (Shadow of the Erdtree)",
-    "category": "Bosses",
-    "slug": "Bosses_(Shadow_of_the_Erdtree)",
-    "url": "https://eldenring.fandom.com/wiki/Bosses_(Shadow_of_the_Erdtree)"
-  },
-  {
-    "title": "Talismans (Shadow of the Erdtree)",
-    "category": "Talismans",
-    "slug": "Talismans_(Shadow_of_the_Erdtree)",
-    "url": "https://eldenring.fandom.com/wiki/Talismans_(Shadow_of_the_Erdtree)"
-  },
-  {
-    "title": "Adula's Moonblade",
-    "category": "Sorceries",
-    "slug": "Adula's_Moonblade",
-    "url": "https://eldenring.fandom.com/wiki/Adula's_Moonblade"
-  },
-  {
-    "title": "Agheel's Flame",
-    "category": "Incantations",
-    "slug": "Agheel's_Flame",
-    "url": "https://eldenring.fandom.com/wiki/Agheel's_Flame"
-  },
-  {
-    "title": "Shields",
+    "title": "Death Knight's Twin Axes",
     "category": "Weapons",
-    "slug": "Shields",
-    "url": "https://eldenring.fandom.com/wiki/Shields"
+    "slug": "Death_Knight's_Twin_Axes",
+    "url": "https://eldenring.fandom.com/wiki/Death_Knight's_Twin_Axes"
   },
   {
-    "title": "Abductor Virgin",
-    "category": "Bosses",
-    "slug": "Abductor_Virgin",
-    "url": "https://eldenring.fandom.com/wiki/Abductor_Virgin"
-  },
-  {
-    "title": "Aged One's Exultation",
-    "category": "Talismans",
-    "slug": "Aged_One's_Exultation",
-    "url": "https://eldenring.fandom.com/wiki/Aged_One's_Exultation"
-  },
-  {
-    "title": "Ambush Shard",
-    "category": "Sorceries",
-    "slug": "Ambush_Shard",
-    "url": "https://eldenring.fandom.com/wiki/Ambush_Shard"
-  },
-  {
-    "title": "Ancient Dragons' Lightning Spear",
-    "category": "Incantations",
-    "slug": "Ancient_Dragons'_Lightning_Spear",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragons'_Lightning_Spear"
-  },
-  {
-    "title": "Skill",
+    "title": "Forked Hatchet",
     "category": "Weapons",
-    "slug": "Skill",
-    "url": "https://eldenring.fandom.com/wiki/Skill"
+    "slug": "Forked_Hatchet",
+    "url": "https://eldenring.fandom.com/wiki/Forked_Hatchet"
   },
   {
-    "title": "Adan, Thief of Fire",
-    "category": "Bosses",
-    "slug": "Adan,_Thief_of_Fire",
-    "url": "https://eldenring.fandom.com/wiki/Adan,_Thief_of_Fire"
-  },
-  {
-    "title": "Ailment Talisman",
-    "category": "Talismans",
-    "slug": "Ailment_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Ailment_Talisman"
-  },
-  {
-    "title": "Ancient Death Rancor",
-    "category": "Sorceries",
-    "slug": "Ancient_Death_Rancor",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Death_Rancor"
-  },
-  {
-    "title": "Ancient Dragons' Lightning Strike",
-    "category": "Incantations",
-    "slug": "Ancient_Dragons'_Lightning_Strike",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragons'_Lightning_Strike"
-  },
-  {
-    "title": "Axes",
+    "title": "Forked-Tongue Hatchet",
     "category": "Weapons",
-    "slug": "Axes",
-    "url": "https://eldenring.fandom.com/wiki/Axes"
+    "slug": "Forked-Tongue_Hatchet",
+    "url": "https://eldenring.fandom.com/wiki/Forked-Tongue_Hatchet"
   },
   {
-    "title": "Alecto, Black Knife Ringleader",
-    "category": "Bosses",
-    "slug": "Alecto,_Black_Knife_Ringleader",
-    "url": "https://eldenring.fandom.com/wiki/Alecto,_Black_Knife_Ringleader"
-  },
-  {
-    "title": "Ancestral Spirit's Horn",
-    "category": "Talismans",
-    "slug": "Ancestral_Spirit's_Horn",
-    "url": "https://eldenring.fandom.com/wiki/Ancestral_Spirit's_Horn"
-  },
-  {
-    "title": "Blades of Stone",
-    "category": "Sorceries",
-    "slug": "Blades_of_Stone",
-    "url": "https://eldenring.fandom.com/wiki/Blades_of_Stone"
-  },
-  {
-    "title": "Aspects of the Crucible: Bloom",
-    "category": "Incantations",
-    "slug": "Aspects_of_the_Crucible-_Bloom",
-    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Bloom"
-  },
-  {
-    "title": "Backhand Blades",
+    "title": "Hand Axe",
     "category": "Weapons",
-    "slug": "Backhand_Blades",
-    "url": "https://eldenring.fandom.com/wiki/Backhand_Blades"
+    "slug": "Hand_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Hand_Axe"
   },
   {
-    "title": "Ancestor Spirit",
-    "category": "Bosses",
-    "slug": "Ancestor_Spirit",
-    "url": "https://eldenring.fandom.com/wiki/Ancestor_Spirit"
-  },
-  {
-    "title": "Arrow's Reach Talisman",
-    "category": "Talismans",
-    "slug": "Arrow's_Reach_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Arrow's_Reach_Talisman"
-  },
-  {
-    "title": "Briars of Punishment",
-    "category": "Sorceries",
-    "slug": "Briars_of_Punishment",
-    "url": "https://eldenring.fandom.com/wiki/Briars_of_Punishment"
-  },
-  {
-    "title": "Aspects of the Crucible: Breath",
-    "category": "Incantations",
-    "slug": "Aspects_of_the_Crucible-_Breath",
-    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Breath"
-  },
-  {
-    "title": "Ballistas",
+    "title": "Highland Axe",
     "category": "Weapons",
-    "slug": "Ballistas",
-    "url": "https://eldenring.fandom.com/wiki/Ballistas"
+    "slug": "Highland_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Highland_Axe"
   },
   {
-    "title": "Ancient Dragon Lansseax",
-    "category": "Bosses",
-    "slug": "Ancient_Dragon_Lansseax",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragon_Lansseax"
-  },
-  {
-    "title": "Arrow's Soaring Sting Talisman",
-    "category": "Talismans",
-    "slug": "Arrow's_Soaring_Sting_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Arrow's_Soaring_Sting_Talisman"
-  },
-  {
-    "title": "Briars of Sin (spell)",
-    "category": "Sorceries",
-    "slug": "Briars_of_Sin_(spell)",
-    "url": "https://eldenring.fandom.com/wiki/Briars_of_Sin_(spell)"
-  },
-  {
-    "title": "Aspects of the Crucible: Horns",
-    "category": "Incantations",
-    "slug": "Aspects_of_the_Crucible-_Horns",
-    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Horns"
-  },
-  {
-    "title": "Beast Claws",
+    "title": "Icerind Hatchet",
     "category": "Weapons",
-    "slug": "Beast_Claws",
-    "url": "https://eldenring.fandom.com/wiki/Beast_Claws"
+    "slug": "Icerind_Hatchet",
+    "url": "https://eldenring.fandom.com/wiki/Icerind_Hatchet"
   },
   {
-    "title": "Ancient Dragon Senessax",
-    "category": "Bosses",
-    "slug": "Ancient_Dragon_Senessax",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragon_Senessax"
-  },
-  {
-    "title": "Arrow's Sting Talisman",
-    "category": "Talismans",
-    "slug": "Arrow's_Sting_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Arrow's_Sting_Talisman"
-  },
-  {
-    "title": "Cannon of Haima",
-    "category": "Sorceries",
-    "slug": "Cannon_of_Haima",
-    "url": "https://eldenring.fandom.com/wiki/Cannon_of_Haima"
-  },
-  {
-    "title": "Aspects of the Crucible: Tail",
-    "category": "Incantations",
-    "slug": "Aspects_of_the_Crucible-_Tail",
-    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Tail"
-  },
-  {
-    "title": "Bows",
+    "title": "Backhand Blade",
     "category": "Weapons",
-    "slug": "Bows",
-    "url": "https://eldenring.fandom.com/wiki/Bows"
+    "slug": "Backhand_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Backhand_Blade"
   },
   {
-    "title": "Ancient Dragon-Man",
-    "category": "Bosses",
-    "slug": "Ancient_Dragon-Man",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragon-Man"
-  },
-  {
-    "title": "Arsenal Charm",
-    "category": "Talismans",
-    "slug": "Arsenal_Charm",
-    "url": "https://eldenring.fandom.com/wiki/Arsenal_Charm"
-  },
-  {
-    "title": "Carian Blade Sorceries",
-    "category": "Sorceries",
-    "slug": "Carian_Blade_Sorceries",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Blade_Sorceries"
-  },
-  {
-    "title": "Aspects of the Crucible: Thorns",
-    "category": "Incantations",
-    "slug": "Aspects_of_the_Crucible-_Thorns",
-    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Thorns"
-  },
-  {
-    "title": "Claws",
+    "title": "Curseblade's Cirque",
     "category": "Weapons",
-    "slug": "Claws",
-    "url": "https://eldenring.fandom.com/wiki/Claws"
+    "slug": "Curseblade's_Cirque",
+    "url": "https://eldenring.fandom.com/wiki/Curseblade's_Cirque"
   },
   {
-    "title": "Ancient Hero of Zamor",
-    "category": "Bosses",
-    "slug": "Ancient_Hero_of_Zamor",
-    "url": "https://eldenring.fandom.com/wiki/Ancient_Hero_of_Zamor"
-  },
-  {
-    "title": "Arsenal Charm +1",
-    "category": "Talismans",
-    "slug": "Arsenal_Charm_+1",
-    "url": "https://eldenring.fandom.com/wiki/Arsenal_Charm_+1"
-  },
-  {
-    "title": "Carian Greatsword",
-    "category": "Sorceries",
-    "slug": "Carian_Greatsword",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Greatsword"
-  },
-  {
-    "title": "Assassin's Approach",
-    "category": "Incantations",
-    "slug": "Assassin's_Approach",
-    "url": "https://eldenring.fandom.com/wiki/Assassin's_Approach"
-  },
-  {
-    "title": "Colossal Swords",
+    "title": "Smithscript Cirque",
     "category": "Weapons",
-    "slug": "Colossal_Swords",
-    "url": "https://eldenring.fandom.com/wiki/Colossal_Swords"
+    "slug": "Smithscript_Cirque",
+    "url": "https://eldenring.fandom.com/wiki/Smithscript_Cirque"
   },
   {
-    "title": "Arbor Sentinel",
-    "category": "Bosses",
-    "slug": "Arbor_Sentinel",
-    "url": "https://eldenring.fandom.com/wiki/Arbor_Sentinel"
-  },
-  {
-    "title": "Assassin's Cerulean Dagger",
-    "category": "Talismans",
-    "slug": "Assassin's_Cerulean_Dagger",
-    "url": "https://eldenring.fandom.com/wiki/Assassin's_Cerulean_Dagger"
-  },
-  {
-    "title": "Carian Phalanx",
-    "category": "Sorceries",
-    "slug": "Carian_Phalanx",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Phalanx"
-  },
-  {
-    "title": "Barrier of Gold",
-    "category": "Incantations",
-    "slug": "Barrier_of_Gold",
-    "url": "https://eldenring.fandom.com/wiki/Barrier_of_Gold"
-  },
-  {
-    "title": "Colossal Weapons",
+    "title": "Beast Claw (weapon)",
     "category": "Weapons",
-    "slug": "Colossal_Weapons",
-    "url": "https://eldenring.fandom.com/wiki/Colossal_Weapons"
+    "slug": "Beast_Claw_(weapon)",
+    "url": "https://eldenring.fandom.com/wiki/Beast_Claw_(weapon)"
   },
   {
-    "title": "Astel, Naturalborn of the Void",
-    "category": "Bosses",
-    "slug": "Astel,_Naturalborn_of_the_Void",
-    "url": "https://eldenring.fandom.com/wiki/Astel,_Naturalborn_of_the_Void"
-  },
-  {
-    "title": "Assassin's Crimson Dagger",
-    "category": "Talismans",
-    "slug": "Assassin's_Crimson_Dagger",
-    "url": "https://eldenring.fandom.com/wiki/Assassin's_Crimson_Dagger"
-  },
-  {
-    "title": "Carian Piercer",
-    "category": "Sorceries",
-    "slug": "Carian_Piercer",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Piercer"
-  },
-  {
-    "title": "Bayle's Flame Lightning",
-    "category": "Incantations",
-    "slug": "Bayle's_Flame_Lightning",
-    "url": "https://eldenring.fandom.com/wiki/Bayle's_Flame_Lightning"
-  },
-  {
-    "title": "Crossbows",
+    "title": "Red Bear's Claw",
     "category": "Weapons",
-    "slug": "Crossbows",
-    "url": "https://eldenring.fandom.com/wiki/Crossbows"
+    "slug": "Red_Bear's_Claw",
+    "url": "https://eldenring.fandom.com/wiki/Red_Bear's_Claw"
   },
   {
-    "title": "Astel, Stars of Darkness",
-    "category": "Bosses",
-    "slug": "Astel,_Stars_of_Darkness",
-    "url": "https://eldenring.fandom.com/wiki/Astel,_Stars_of_Darkness"
+    "title": "Bloodhound Claws",
+    "category": "Weapons",
+    "slug": "Bloodhound_Claws",
+    "url": "https://eldenring.fandom.com/wiki/Bloodhound_Claws"
   },
   {
-    "title": "Axe Talisman",
-    "category": "Talismans",
-    "slug": "Axe_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Axe_Talisman"
+    "title": "Claws of Night",
+    "category": "Weapons",
+    "slug": "Claws_of_Night",
+    "url": "https://eldenring.fandom.com/wiki/Claws_of_Night"
   },
   {
-    "title": "Carian Retaliation",
-    "category": "Sorceries",
-    "slug": "Carian_Retaliation",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Retaliation"
+    "title": "Hookclaws",
+    "category": "Weapons",
+    "slug": "Hookclaws",
+    "url": "https://eldenring.fandom.com/wiki/Hookclaws"
   },
   {
-    "title": "Bayle's Tyranny",
-    "category": "Incantations",
-    "slug": "Bayle's_Tyranny",
-    "url": "https://eldenring.fandom.com/wiki/Bayle's_Tyranny"
+    "title": "Raptor Talons",
+    "category": "Weapons",
+    "slug": "Raptor_Talons",
+    "url": "https://eldenring.fandom.com/wiki/Raptor_Talons"
+  },
+  {
+    "title": "Venomous Fang",
+    "category": "Weapons",
+    "slug": "Venomous_Fang",
+    "url": "https://eldenring.fandom.com/wiki/Venomous_Fang"
+  },
+  {
+    "title": "Ancient Meteoric Ore Greatsword",
+    "category": "Weapons",
+    "slug": "Ancient_Meteoric_Ore_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Meteoric_Ore_Greatsword"
+  },
+  {
+    "title": "Fire Knight's Greatsword",
+    "category": "Weapons",
+    "slug": "Fire_Knight's_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Fire_Knight's_Greatsword"
+  },
+  {
+    "title": "Godslayer's Greatsword",
+    "category": "Weapons",
+    "slug": "Godslayer's_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Godslayer's_Greatsword"
+  },
+  {
+    "title": "Grafted Blade Greatsword",
+    "category": "Weapons",
+    "slug": "Grafted_Blade_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Grafted_Blade_Greatsword"
+  },
+  {
+    "title": "Greatsword",
+    "category": "Weapons",
+    "slug": "Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Greatsword"
+  },
+  {
+    "title": "Greatsword of Radahn (Light)",
+    "category": "Weapons",
+    "slug": "Greatsword_of_Radahn_(Light)",
+    "url": "https://eldenring.fandom.com/wiki/Greatsword_of_Radahn_(Light)"
+  },
+  {
+    "title": "Greatsword of Radahn (Lord)",
+    "category": "Weapons",
+    "slug": "Greatsword_of_Radahn_(Lord)",
+    "url": "https://eldenring.fandom.com/wiki/Greatsword_of_Radahn_(Lord)"
+  },
+  {
+    "title": "Maliketh's Black Blade",
+    "category": "Weapons",
+    "slug": "Maliketh's_Black_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Maliketh's_Black_Blade"
+  },
+  {
+    "title": "Anvil Hammer",
+    "category": "Weapons",
+    "slug": "Anvil_Hammer",
+    "url": "https://eldenring.fandom.com/wiki/Anvil_Hammer"
+  },
+  {
+    "title": "Axe of Godfrey",
+    "category": "Weapons",
+    "slug": "Axe_of_Godfrey",
+    "url": "https://eldenring.fandom.com/wiki/Axe_of_Godfrey"
+  },
+  {
+    "title": "Bloodfiend's Arm",
+    "category": "Weapons",
+    "slug": "Bloodfiend's_Arm",
+    "url": "https://eldenring.fandom.com/wiki/Bloodfiend's_Arm"
+  },
+  {
+    "title": "Devonia's Hammer",
+    "category": "Weapons",
+    "slug": "Devonia's_Hammer",
+    "url": "https://eldenring.fandom.com/wiki/Devonia's_Hammer"
+  },
+  {
+    "title": "Dragon Greatclaw",
+    "category": "Weapons",
+    "slug": "Dragon_Greatclaw",
+    "url": "https://eldenring.fandom.com/wiki/Dragon_Greatclaw"
+  },
+  {
+    "title": "Duelist Greataxe",
+    "category": "Weapons",
+    "slug": "Duelist_Greataxe",
+    "url": "https://eldenring.fandom.com/wiki/Duelist_Greataxe"
+  },
+  {
+    "title": "Envoy's Greathorn",
+    "category": "Weapons",
+    "slug": "Envoy's_Greathorn",
+    "url": "https://eldenring.fandom.com/wiki/Envoy's_Greathorn"
+  },
+  {
+    "title": "Fallingstar Beast Jaw",
+    "category": "Weapons",
+    "slug": "Fallingstar_Beast_Jaw",
+    "url": "https://eldenring.fandom.com/wiki/Fallingstar_Beast_Jaw"
+  },
+  {
+    "title": "Beastman's Cleaver",
+    "category": "Weapons",
+    "slug": "Beastman's_Cleaver",
+    "url": "https://eldenring.fandom.com/wiki/Beastman's_Cleaver"
+  },
+  {
+    "title": "Bloodhound's Fang",
+    "category": "Weapons",
+    "slug": "Bloodhound's_Fang",
+    "url": "https://eldenring.fandom.com/wiki/Bloodhound's_Fang"
+  },
+  {
+    "title": "Dismounter",
+    "category": "Weapons",
+    "slug": "Dismounter",
+    "url": "https://eldenring.fandom.com/wiki/Dismounter"
+  },
+  {
+    "title": "Freyja's Greatsword",
+    "category": "Weapons",
+    "slug": "Freyja's_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Freyja's_Greatsword"
+  },
+  {
+    "title": "Horned Warrior's Greatsword",
+    "category": "Weapons",
+    "slug": "Horned_Warrior's_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Horned_Warrior's_Greatsword"
+  },
+  {
+    "title": "Magma Wyrm's Scalesword",
+    "category": "Weapons",
+    "slug": "Magma_Wyrm's_Scalesword",
+    "url": "https://eldenring.fandom.com/wiki/Magma_Wyrm's_Scalesword"
+  },
+  {
+    "title": "Monk's Flameblade",
+    "category": "Weapons",
+    "slug": "Monk's_Flameblade",
+    "url": "https://eldenring.fandom.com/wiki/Monk's_Flameblade"
+  },
+  {
+    "title": "Morgott's Cursed Sword",
+    "category": "Weapons",
+    "slug": "Morgott's_Cursed_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Morgott's_Cursed_Sword"
+  },
+  {
+    "title": "Bandit's Curved Sword",
+    "category": "Weapons",
+    "slug": "Bandit's_Curved_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Bandit's_Curved_Sword"
+  },
+  {
+    "title": "Beastman's Curved Sword",
+    "category": "Weapons",
+    "slug": "Beastman's_Curved_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Beastman's_Curved_Sword"
+  },
+  {
+    "title": "Dancing Blade of Ranah",
+    "category": "Weapons",
+    "slug": "Dancing_Blade_of_Ranah",
+    "url": "https://eldenring.fandom.com/wiki/Dancing_Blade_of_Ranah"
+  },
+  {
+    "title": "Eclipse Shotel",
+    "category": "Weapons",
+    "slug": "Eclipse_Shotel",
+    "url": "https://eldenring.fandom.com/wiki/Eclipse_Shotel"
+  },
+  {
+    "title": "Falchion",
+    "category": "Weapons",
+    "slug": "Falchion",
+    "url": "https://eldenring.fandom.com/wiki/Falchion"
+  },
+  {
+    "title": "Falx",
+    "category": "Weapons",
+    "slug": "Falx",
+    "url": "https://eldenring.fandom.com/wiki/Falx"
+  },
+  {
+    "title": "Flowing Curved Sword",
+    "category": "Weapons",
+    "slug": "Flowing_Curved_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Flowing_Curved_Sword"
+  },
+  {
+    "title": "Grossmesser",
+    "category": "Weapons",
+    "slug": "Grossmesser",
+    "url": "https://eldenring.fandom.com/wiki/Grossmesser"
+  },
+  {
+    "title": "Black Knife",
+    "category": "Weapons",
+    "slug": "Black_Knife",
+    "url": "https://eldenring.fandom.com/wiki/Black_Knife"
+  },
+  {
+    "title": "Blade of Calling",
+    "category": "Weapons",
+    "slug": "Blade_of_Calling",
+    "url": "https://eldenring.fandom.com/wiki/Blade_of_Calling"
+  },
+  {
+    "title": "Bloodstained Dagger",
+    "category": "Weapons",
+    "slug": "Bloodstained_Dagger",
+    "url": "https://eldenring.fandom.com/wiki/Bloodstained_Dagger"
+  },
+  {
+    "title": "Celebrant's Sickle",
+    "category": "Weapons",
+    "slug": "Celebrant's_Sickle",
+    "url": "https://eldenring.fandom.com/wiki/Celebrant's_Sickle"
+  },
+  {
+    "title": "Cinquedea",
+    "category": "Weapons",
+    "slug": "Cinquedea",
+    "url": "https://eldenring.fandom.com/wiki/Cinquedea"
+  },
+  {
+    "title": "Crystal Knife",
+    "category": "Weapons",
+    "slug": "Crystal_Knife",
+    "url": "https://eldenring.fandom.com/wiki/Crystal_Knife"
+  },
+  {
+    "title": "Dagger",
+    "category": "Weapons",
+    "slug": "Dagger",
+    "url": "https://eldenring.fandom.com/wiki/Dagger"
+  },
+  {
+    "title": "Duchess' Dagger",
+    "category": "Weapons",
+    "slug": "Duchess'_Dagger",
+    "url": "https://eldenring.fandom.com/wiki/Duchess'_Dagger"
+  },
+  {
+    "title": "Caestus",
+    "category": "Weapons",
+    "slug": "Caestus",
+    "url": "https://eldenring.fandom.com/wiki/Caestus"
+  },
+  {
+    "title": "Cipher Pata",
+    "category": "Weapons",
+    "slug": "Cipher_Pata",
+    "url": "https://eldenring.fandom.com/wiki/Cipher_Pata"
+  },
+  {
+    "title": "Clinging Bone",
+    "category": "Weapons",
+    "slug": "Clinging_Bone",
+    "url": "https://eldenring.fandom.com/wiki/Clinging_Bone"
+  },
+  {
+    "title": "Golem Fist",
+    "category": "Weapons",
+    "slug": "Golem_Fist",
+    "url": "https://eldenring.fandom.com/wiki/Golem_Fist"
+  },
+  {
+    "title": "Grafted Dragon",
+    "category": "Weapons",
+    "slug": "Grafted_Dragon",
+    "url": "https://eldenring.fandom.com/wiki/Grafted_Dragon"
+  },
+  {
+    "title": "Iron Ball",
+    "category": "Weapons",
+    "slug": "Iron_Ball",
+    "url": "https://eldenring.fandom.com/wiki/Iron_Ball"
+  },
+  {
+    "title": "Katar",
+    "category": "Weapons",
+    "slug": "Katar",
+    "url": "https://eldenring.fandom.com/wiki/Katar"
+  },
+  {
+    "title": "Madding Hand (weapon)",
+    "category": "Weapons",
+    "slug": "Madding_Hand_(weapon)",
+    "url": "https://eldenring.fandom.com/wiki/Madding_Hand_(weapon)"
+  },
+  {
+    "title": "Bastard's Stars",
+    "category": "Weapons",
+    "slug": "Bastard's_Stars",
+    "url": "https://eldenring.fandom.com/wiki/Bastard's_Stars"
+  },
+  {
+    "title": "Chainlink Flail",
+    "category": "Weapons",
+    "slug": "Chainlink_Flail",
+    "url": "https://eldenring.fandom.com/wiki/Chainlink_Flail"
+  },
+  {
+    "title": "Family Heads",
+    "category": "Weapons",
+    "slug": "Family_Heads",
+    "url": "https://eldenring.fandom.com/wiki/Family_Heads"
+  },
+  {
+    "title": "Flail",
+    "category": "Weapons",
+    "slug": "Flail",
+    "url": "https://eldenring.fandom.com/wiki/Flail"
+  },
+  {
+    "title": "Nightrider Flail",
+    "category": "Weapons",
+    "slug": "Nightrider_Flail",
+    "url": "https://eldenring.fandom.com/wiki/Nightrider_Flail"
+  },
+  {
+    "title": "Serpent Flail",
+    "category": "Weapons",
+    "slug": "Serpent_Flail",
+    "url": "https://eldenring.fandom.com/wiki/Serpent_Flail"
+  },
+  {
+    "title": "Battle Hammer",
+    "category": "Weapons",
+    "slug": "Battle_Hammer",
+    "url": "https://eldenring.fandom.com/wiki/Battle_Hammer"
+  },
+  {
+    "title": "Beastclaw Greathammer",
+    "category": "Weapons",
+    "slug": "Beastclaw_Greathammer",
+    "url": "https://eldenring.fandom.com/wiki/Beastclaw_Greathammer"
+  },
+  {
+    "title": "Black Steel Greathammer",
+    "category": "Weapons",
+    "slug": "Black_Steel_Greathammer",
+    "url": "https://eldenring.fandom.com/wiki/Black_Steel_Greathammer"
+  },
+  {
+    "title": "Brick Hammer",
+    "category": "Weapons",
+    "slug": "Brick_Hammer",
+    "url": "https://eldenring.fandom.com/wiki/Brick_Hammer"
+  },
+  {
+    "title": "Celebrant's Skull",
+    "category": "Weapons",
+    "slug": "Celebrant's_Skull",
+    "url": "https://eldenring.fandom.com/wiki/Celebrant's_Skull"
+  },
+  {
+    "title": "Cranial Vessel Candlestand",
+    "category": "Weapons",
+    "slug": "Cranial_Vessel_Candlestand",
+    "url": "https://eldenring.fandom.com/wiki/Cranial_Vessel_Candlestand"
+  },
+  {
+    "title": "Curved Great Club",
+    "category": "Weapons",
+    "slug": "Curved_Great_Club",
+    "url": "https://eldenring.fandom.com/wiki/Curved_Great_Club"
+  },
+  {
+    "title": "Devourer's Scepter",
+    "category": "Weapons",
+    "slug": "Devourer's_Scepter",
+    "url": "https://eldenring.fandom.com/wiki/Devourer's_Scepter"
+  },
+  {
+    "title": "Dragon-Hunter's Great Katana",
+    "category": "Weapons",
+    "slug": "Dragon-Hunter's_Great_Katana",
+    "url": "https://eldenring.fandom.com/wiki/Dragon-Hunter's_Great_Katana"
+  },
+  {
+    "title": "Great Katana",
+    "category": "Weapons",
+    "slug": "Great_Katana",
+    "url": "https://eldenring.fandom.com/wiki/Great_Katana"
+  },
+  {
+    "title": "Rakshasa's Great Katana",
+    "category": "Weapons",
+    "slug": "Rakshasa's_Great_Katana",
+    "url": "https://eldenring.fandom.com/wiki/Rakshasa's_Great_Katana"
+  },
+  {
+    "title": "Barbed Staff-Spear",
+    "category": "Weapons",
+    "slug": "Barbed_Staff-Spear",
+    "url": "https://eldenring.fandom.com/wiki/Barbed_Staff-Spear"
+  },
+  {
+    "title": "Bloodfiend's Sacred Spear",
+    "category": "Weapons",
+    "slug": "Bloodfiend's_Sacred_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Bloodfiend's_Sacred_Spear"
+  },
+  {
+    "title": "Lance",
+    "category": "Weapons",
+    "slug": "Lance",
+    "url": "https://eldenring.fandom.com/wiki/Lance"
+  },
+  {
+    "title": "Messmer Soldier's Spear",
+    "category": "Weapons",
+    "slug": "Messmer_Soldier's_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Messmer_Soldier's_Spear"
+  },
+  {
+    "title": "Mohgwyn's Sacred Spear",
+    "category": "Weapons",
+    "slug": "Mohgwyn's_Sacred_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Mohgwyn's_Sacred_Spear"
+  },
+  {
+    "title": "Serpent-Hunter",
+    "category": "Weapons",
+    "slug": "Serpent-Hunter",
+    "url": "https://eldenring.fandom.com/wiki/Serpent-Hunter"
+  },
+  {
+    "title": "Siluria's Tree",
+    "category": "Weapons",
+    "slug": "Siluria's_Tree",
+    "url": "https://eldenring.fandom.com/wiki/Siluria's_Tree"
+  },
+  {
+    "title": "Spear of the Impaler",
+    "category": "Weapons",
+    "slug": "Spear_of_the_Impaler",
+    "url": "https://eldenring.fandom.com/wiki/Spear_of_the_Impaler"
+  },
+  {
+    "title": "Axe of Godrick",
+    "category": "Weapons",
+    "slug": "Axe_of_Godrick",
+    "url": "https://eldenring.fandom.com/wiki/Axe_of_Godrick"
+  },
+  {
+    "title": "Bonny Butchering Knife",
+    "category": "Weapons",
+    "slug": "Bonny_Butchering_Knife",
+    "url": "https://eldenring.fandom.com/wiki/Bonny_Butchering_Knife"
+  },
+  {
+    "title": "Butchering Knife",
+    "category": "Weapons",
+    "slug": "Butchering_Knife",
+    "url": "https://eldenring.fandom.com/wiki/Butchering_Knife"
+  },
+  {
+    "title": "Crescent Moon Axe",
+    "category": "Weapons",
+    "slug": "Crescent_Moon_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Crescent_Moon_Axe"
+  },
+  {
+    "title": "Death Knight's Longhaft Axe",
+    "category": "Weapons",
+    "slug": "Death_Knight's_Longhaft_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Death_Knight's_Longhaft_Axe"
+  },
+  {
+    "title": "Executioner's Greataxe",
+    "category": "Weapons",
+    "slug": "Executioner's_Greataxe",
+    "url": "https://eldenring.fandom.com/wiki/Executioner's_Greataxe"
+  },
+  {
+    "title": "Gargoyle's Black Axe",
+    "category": "Weapons",
+    "slug": "Gargoyle's_Black_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Gargoyle's_Black_Axe"
+  },
+  {
+    "title": "Gargoyle's Great Axe",
+    "category": "Weapons",
+    "slug": "Gargoyle's_Great_Axe",
+    "url": "https://eldenring.fandom.com/wiki/Gargoyle's_Great_Axe"
+  },
+  {
+    "title": "Alabaster Lord's Sword",
+    "category": "Weapons",
+    "slug": "Alabaster_Lord's_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Alabaster_Lord's_Sword"
+  },
+  {
+    "title": "Banished Knight's Greatsword",
+    "category": "Weapons",
+    "slug": "Banished_Knight's_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Banished_Knight's_Greatsword"
+  },
+  {
+    "title": "Bastard Sword",
+    "category": "Weapons",
+    "slug": "Bastard_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Bastard_Sword"
+  },
+  {
+    "title": "Blasphemous Blade",
+    "category": "Weapons",
+    "slug": "Blasphemous_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Blasphemous_Blade"
+  },
+  {
+    "title": "Claymore",
+    "category": "Weapons",
+    "slug": "Claymore",
+    "url": "https://eldenring.fandom.com/wiki/Claymore"
+  },
+  {
+    "title": "Dark Moon Greatsword",
+    "category": "Weapons",
+    "slug": "Dark_Moon_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Dark_Moon_Greatsword"
+  },
+  {
+    "title": "Death's Poker",
+    "category": "Weapons",
+    "slug": "Death's_Poker",
+    "url": "https://eldenring.fandom.com/wiki/Death's_Poker"
+  },
+  {
+    "title": "Flamberge",
+    "category": "Weapons",
+    "slug": "Flamberge",
+    "url": "https://eldenring.fandom.com/wiki/Flamberge"
+  },
+  {
+    "title": "Banished Knight's Halberd",
+    "category": "Weapons",
+    "slug": "Banished_Knight's_Halberd",
+    "url": "https://eldenring.fandom.com/wiki/Banished_Knight's_Halberd"
+  },
+  {
+    "title": "Commander's Standard",
+    "category": "Weapons",
+    "slug": "Commander's_Standard",
+    "url": "https://eldenring.fandom.com/wiki/Commander's_Standard"
+  },
+  {
+    "title": "Dragon Halberd",
+    "category": "Weapons",
+    "slug": "Dragon_Halberd",
+    "url": "https://eldenring.fandom.com/wiki/Dragon_Halberd"
+  },
+  {
+    "title": "Gargoyle's Black Halberd",
+    "category": "Weapons",
+    "slug": "Gargoyle's_Black_Halberd",
+    "url": "https://eldenring.fandom.com/wiki/Gargoyle's_Black_Halberd"
+  },
+  {
+    "title": "Gargoyle's Halberd",
+    "category": "Weapons",
+    "slug": "Gargoyle's_Halberd",
+    "url": "https://eldenring.fandom.com/wiki/Gargoyle's_Halberd"
+  },
+  {
+    "title": "Glaive",
+    "category": "Weapons",
+    "slug": "Glaive",
+    "url": "https://eldenring.fandom.com/wiki/Glaive"
+  },
+  {
+    "title": "Golden Halberd",
+    "category": "Weapons",
+    "slug": "Golden_Halberd",
+    "url": "https://eldenring.fandom.com/wiki/Golden_Halberd"
+  },
+  {
+    "title": "Guardian's Swordspear",
+    "category": "Weapons",
+    "slug": "Guardian's_Swordspear",
+    "url": "https://eldenring.fandom.com/wiki/Guardian's_Swordspear"
+  },
+  {
+    "title": "Club",
+    "category": "Weapons",
+    "slug": "Club",
+    "url": "https://eldenring.fandom.com/wiki/Club"
+  },
+  {
+    "title": "Curved Club",
+    "category": "Weapons",
+    "slug": "Curved_Club",
+    "url": "https://eldenring.fandom.com/wiki/Curved_Club"
+  },
+  {
+    "title": "Envoy's Horn",
+    "category": "Weapons",
+    "slug": "Envoy's_Horn",
+    "url": "https://eldenring.fandom.com/wiki/Envoy's_Horn"
+  },
+  {
+    "title": "Flowerstone Gavel",
+    "category": "Weapons",
+    "slug": "Flowerstone_Gavel",
+    "url": "https://eldenring.fandom.com/wiki/Flowerstone_Gavel"
+  },
+  {
+    "title": "Hammer",
+    "category": "Weapons",
+    "slug": "Hammer",
+    "url": "https://eldenring.fandom.com/wiki/Hammer"
+  },
+  {
+    "title": "Mace",
+    "category": "Weapons",
+    "slug": "Mace",
+    "url": "https://eldenring.fandom.com/wiki/Mace"
+  },
+  {
+    "title": "Marika's Hammer",
+    "category": "Weapons",
+    "slug": "Marika's_Hammer",
+    "url": "https://eldenring.fandom.com/wiki/Marika's_Hammer"
+  },
+  {
+    "title": "Monk's Flamemace",
+    "category": "Weapons",
+    "slug": "Monk's_Flamemace",
+    "url": "https://eldenring.fandom.com/wiki/Monk's_Flamemace"
+  },
+  {
+    "title": "Dane's Footwork",
+    "category": "Weapons",
+    "slug": "Dane's_Footwork",
+    "url": "https://eldenring.fandom.com/wiki/Dane's_Footwork"
+  },
+  {
+    "title": "Dryleaf Arts",
+    "category": "Weapons",
+    "slug": "Dryleaf_Arts",
+    "url": "https://eldenring.fandom.com/wiki/Dryleaf_Arts"
+  },
+  {
+    "title": "Bloody Helice",
+    "category": "Weapons",
+    "slug": "Bloody_Helice",
+    "url": "https://eldenring.fandom.com/wiki/Bloody_Helice"
+  },
+  {
+    "title": "Dragon King's Cragblade",
+    "category": "Weapons",
+    "slug": "Dragon_King's_Cragblade",
+    "url": "https://eldenring.fandom.com/wiki/Dragon_King's_Cragblade"
+  },
+  {
+    "title": "Godskin Stitcher",
+    "category": "Weapons",
+    "slug": "Godskin_Stitcher",
+    "url": "https://eldenring.fandom.com/wiki/Godskin_Stitcher"
+  },
+  {
+    "title": "Great \u00c9p\u00e9e",
+    "category": "Weapons",
+    "slug": "Great_\u00c9p\u00e9e",
+    "url": "https://eldenring.fandom.com/wiki/Great_\u00c9p\u00e9e"
+  },
+  {
+    "title": "Queelign's Greatsword",
+    "category": "Weapons",
+    "slug": "Queelign's_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Queelign's_Greatsword"
+  },
+  {
+    "title": "Sword Lance",
+    "category": "Weapons",
+    "slug": "Sword_Lance",
+    "url": "https://eldenring.fandom.com/wiki/Sword_Lance"
+  },
+  {
+    "title": "Dragonscale Blade",
+    "category": "Weapons",
+    "slug": "Dragonscale_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Dragonscale_Blade"
+  },
+  {
+    "title": "Hand of Malenia",
+    "category": "Weapons",
+    "slug": "Hand_of_Malenia",
+    "url": "https://eldenring.fandom.com/wiki/Hand_of_Malenia"
+  },
+  {
+    "title": "Meteoric Ore Blade",
+    "category": "Weapons",
+    "slug": "Meteoric_Ore_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Meteoric_Ore_Blade"
+  },
+  {
+    "title": "Moonveil",
+    "category": "Weapons",
+    "slug": "Moonveil",
+    "url": "https://eldenring.fandom.com/wiki/Moonveil"
+  },
+  {
+    "title": "Nagakiba",
+    "category": "Weapons",
+    "slug": "Nagakiba",
+    "url": "https://eldenring.fandom.com/wiki/Nagakiba"
+  },
+  {
+    "title": "Rivers of Blood",
+    "category": "Weapons",
+    "slug": "Rivers_of_Blood",
+    "url": "https://eldenring.fandom.com/wiki/Rivers_of_Blood"
+  },
+  {
+    "title": "Serpentbone Blade",
+    "category": "Weapons",
+    "slug": "Serpentbone_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Serpentbone_Blade"
+  },
+  {
+    "title": "Star-Lined Sword",
+    "category": "Weapons",
+    "slug": "Star-Lined_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Star-Lined_Sword"
+  },
+  {
+    "title": "Leda's Sword",
+    "category": "Weapons",
+    "slug": "Leda's_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Leda's_Sword"
+  },
+  {
+    "title": "Milady",
+    "category": "Weapons",
+    "slug": "Milady",
+    "url": "https://eldenring.fandom.com/wiki/Milady"
+  },
+  {
+    "title": "Rellana's Twin Blades",
+    "category": "Weapons",
+    "slug": "Rellana's_Twin_Blades",
+    "url": "https://eldenring.fandom.com/wiki/Rellana's_Twin_Blades"
+  },
+  {
+    "title": "Chilling Perfume Bottle",
+    "category": "Weapons",
+    "slug": "Chilling_Perfume_Bottle",
+    "url": "https://eldenring.fandom.com/wiki/Chilling_Perfume_Bottle"
+  },
+  {
+    "title": "Deadly Poison Perfume Bottle",
+    "category": "Weapons",
+    "slug": "Deadly_Poison_Perfume_Bottle",
+    "url": "https://eldenring.fandom.com/wiki/Deadly_Poison_Perfume_Bottle"
+  },
+  {
+    "title": "Firespark Perfume Bottle",
+    "category": "Weapons",
+    "slug": "Firespark_Perfume_Bottle",
+    "url": "https://eldenring.fandom.com/wiki/Firespark_Perfume_Bottle"
+  },
+  {
+    "title": "Frenzyflame Perfume Bottle",
+    "category": "Weapons",
+    "slug": "Frenzyflame_Perfume_Bottle",
+    "url": "https://eldenring.fandom.com/wiki/Frenzyflame_Perfume_Bottle"
+  },
+  {
+    "title": "Lightning Perfume Bottle",
+    "category": "Weapons",
+    "slug": "Lightning_Perfume_Bottle",
+    "url": "https://eldenring.fandom.com/wiki/Lightning_Perfume_Bottle"
+  },
+  {
+    "title": "Grave Scythe",
+    "category": "Weapons",
+    "slug": "Grave_Scythe",
+    "url": "https://eldenring.fandom.com/wiki/Grave_Scythe"
+  },
+  {
+    "title": "Halo Scythe",
+    "category": "Weapons",
+    "slug": "Halo_Scythe",
+    "url": "https://eldenring.fandom.com/wiki/Halo_Scythe"
+  },
+  {
+    "title": "Obsidian Lamina",
+    "category": "Weapons",
+    "slug": "Obsidian_Lamina",
+    "url": "https://eldenring.fandom.com/wiki/Obsidian_Lamina"
+  },
+  {
+    "title": "Scythe",
+    "category": "Weapons",
+    "slug": "Scythe",
+    "url": "https://eldenring.fandom.com/wiki/Scythe"
+  },
+  {
+    "title": "Winged Scythe",
+    "category": "Weapons",
+    "slug": "Winged_Scythe",
+    "url": "https://eldenring.fandom.com/wiki/Winged_Scythe"
+  },
+  {
+    "title": "Bloodfiend's Fork",
+    "category": "Weapons",
+    "slug": "Bloodfiend's_Fork",
+    "url": "https://eldenring.fandom.com/wiki/Bloodfiend's_Fork"
+  },
+  {
+    "title": "Bolt of Gransax",
+    "category": "Weapons",
+    "slug": "Bolt_of_Gransax",
+    "url": "https://eldenring.fandom.com/wiki/Bolt_of_Gransax"
+  },
+  {
+    "title": "Celebrant's Rib-Rake",
+    "category": "Weapons",
+    "slug": "Celebrant's_Rib-Rake",
+    "url": "https://eldenring.fandom.com/wiki/Celebrant's_Rib-Rake"
+  },
+  {
+    "title": "Clayman's Harpoon",
+    "category": "Weapons",
+    "slug": "Clayman's_Harpoon",
+    "url": "https://eldenring.fandom.com/wiki/Clayman's_Harpoon"
+  },
+  {
+    "title": "Cleanrot Spear",
+    "category": "Weapons",
+    "slug": "Cleanrot_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Cleanrot_Spear"
+  },
+  {
+    "title": "Cross-Naginata",
+    "category": "Weapons",
+    "slug": "Cross-Naginata",
+    "url": "https://eldenring.fandom.com/wiki/Cross-Naginata"
+  },
+  {
+    "title": "Crystal Spear",
+    "category": "Weapons",
+    "slug": "Crystal_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Crystal_Spear"
+  },
+  {
+    "title": "Death Ritual Spear",
+    "category": "Weapons",
+    "slug": "Death_Ritual_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Death_Ritual_Spear"
+  },
+  {
+    "title": "Broadsword",
+    "category": "Weapons",
+    "slug": "Broadsword",
+    "url": "https://eldenring.fandom.com/wiki/Broadsword"
+  },
+  {
+    "title": "Cane Sword",
+    "category": "Weapons",
+    "slug": "Cane_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Cane_Sword"
+  },
+  {
+    "title": "Carian Knight's Sword",
+    "category": "Weapons",
+    "slug": "Carian_Knight's_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Knight's_Sword"
+  },
+  {
+    "title": "Coded Sword",
+    "category": "Weapons",
+    "slug": "Coded_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Coded_Sword"
   },
   {
     "title": "Crystal Sword",
@@ -396,34 +990,568 @@
     "url": "https://eldenring.fandom.com/wiki/Crystal_Sword"
   },
   {
+    "title": "Golden Epitaph",
+    "category": "Weapons",
+    "slug": "Golden_Epitaph",
+    "url": "https://eldenring.fandom.com/wiki/Golden_Epitaph"
+  },
+  {
+    "title": "Lazuli Glintstone Sword",
+    "category": "Weapons",
+    "slug": "Lazuli_Glintstone_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Lazuli_Glintstone_Sword"
+  },
+  {
+    "title": "Longsword",
+    "category": "Weapons",
+    "slug": "Longsword",
+    "url": "https://eldenring.fandom.com/wiki/Longsword"
+  },
+  {
+    "title": "Antspur Rapier",
+    "category": "Weapons",
+    "slug": "Antspur_Rapier",
+    "url": "https://eldenring.fandom.com/wiki/Antspur_Rapier"
+  },
+  {
+    "title": "Carian Sorcery Sword",
+    "category": "Weapons",
+    "slug": "Carian_Sorcery_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Sorcery_Sword"
+  },
+  {
+    "title": "Cleanrot Knight's Sword",
+    "category": "Weapons",
+    "slug": "Cleanrot_Knight's_Sword",
+    "url": "https://eldenring.fandom.com/wiki/Cleanrot_Knight's_Sword"
+  },
+  {
+    "title": "Estoc",
+    "category": "Weapons",
+    "slug": "Estoc",
+    "url": "https://eldenring.fandom.com/wiki/Estoc"
+  },
+  {
+    "title": "Frozen Needle",
+    "category": "Weapons",
+    "slug": "Frozen_Needle",
+    "url": "https://eldenring.fandom.com/wiki/Frozen_Needle"
+  },
+  {
+    "title": "Noble's Estoc",
+    "category": "Weapons",
+    "slug": "Noble's_Estoc",
+    "url": "https://eldenring.fandom.com/wiki/Noble's_Estoc"
+  },
+  {
+    "title": "Rapier",
+    "category": "Weapons",
+    "slug": "Rapier",
+    "url": "https://eldenring.fandom.com/wiki/Rapier"
+  },
+  {
+    "title": "Rogier's Rapier",
+    "category": "Weapons",
+    "slug": "Rogier's_Rapier",
+    "url": "https://eldenring.fandom.com/wiki/Rogier's_Rapier"
+  },
+  {
+    "title": "Beast-Repellent Torch",
+    "category": "Weapons",
+    "slug": "Beast-Repellent_Torch",
+    "url": "https://eldenring.fandom.com/wiki/Beast-Repellent_Torch"
+  },
+  {
+    "title": "Ghostflame Torch",
+    "category": "Weapons",
+    "slug": "Ghostflame_Torch",
+    "url": "https://eldenring.fandom.com/wiki/Ghostflame_Torch"
+  },
+  {
+    "title": "Lamenting Visage",
+    "category": "Weapons",
+    "slug": "Lamenting_Visage",
+    "url": "https://eldenring.fandom.com/wiki/Lamenting_Visage"
+  },
+  {
+    "title": "Nanaya's Torch",
+    "category": "Weapons",
+    "slug": "Nanaya's_Torch",
+    "url": "https://eldenring.fandom.com/wiki/Nanaya's_Torch"
+  },
+  {
+    "title": "Sentry's Torch",
+    "category": "Weapons",
+    "slug": "Sentry's_Torch",
+    "url": "https://eldenring.fandom.com/wiki/Sentry's_Torch"
+  },
+  {
+    "title": "St. Trina's Torch",
+    "category": "Weapons",
+    "slug": "St._Trina's_Torch",
+    "url": "https://eldenring.fandom.com/wiki/St._Trina's_Torch"
+  },
+  {
+    "title": "Steel-Wire Torch",
+    "category": "Weapons",
+    "slug": "Steel-Wire_Torch",
+    "url": "https://eldenring.fandom.com/wiki/Steel-Wire_Torch"
+  },
+  {
+    "title": "Torch",
+    "category": "Weapons",
+    "slug": "Torch",
+    "url": "https://eldenring.fandom.com/wiki/Torch"
+  },
+  {
+    "title": "Black Steel Twinblade",
+    "category": "Weapons",
+    "slug": "Black_Steel_Twinblade",
+    "url": "https://eldenring.fandom.com/wiki/Black_Steel_Twinblade"
+  },
+  {
+    "title": "Eleonora's Poleblade",
+    "category": "Weapons",
+    "slug": "Eleonora's_Poleblade",
+    "url": "https://eldenring.fandom.com/wiki/Eleonora's_Poleblade"
+  },
+  {
+    "title": "Euporia",
+    "category": "Weapons",
+    "slug": "Euporia",
+    "url": "https://eldenring.fandom.com/wiki/Euporia"
+  },
+  {
+    "title": "Gargoyle's Black Blades",
+    "category": "Weapons",
+    "slug": "Gargoyle's_Black_Blades",
+    "url": "https://eldenring.fandom.com/wiki/Gargoyle's_Black_Blades"
+  },
+  {
+    "title": "Gargoyle's Twinblade",
+    "category": "Weapons",
+    "slug": "Gargoyle's_Twinblade",
+    "url": "https://eldenring.fandom.com/wiki/Gargoyle's_Twinblade"
+  },
+  {
+    "title": "Godskin Peeler",
+    "category": "Weapons",
+    "slug": "Godskin_Peeler",
+    "url": "https://eldenring.fandom.com/wiki/Godskin_Peeler"
+  },
+  {
+    "title": "Twinblade",
+    "category": "Weapons",
+    "slug": "Twinblade",
+    "url": "https://eldenring.fandom.com/wiki/Twinblade"
+  },
+  {
+    "title": "Twinned Knight Swords",
+    "category": "Weapons",
+    "slug": "Twinned_Knight_Swords",
+    "url": "https://eldenring.fandom.com/wiki/Twinned_Knight_Swords"
+  },
+  {
+    "title": "Giant's Red Braid",
+    "category": "Weapons",
+    "slug": "Giant's_Red_Braid",
+    "url": "https://eldenring.fandom.com/wiki/Giant's_Red_Braid"
+  },
+  {
+    "title": "Hoslow's Petal Whip",
+    "category": "Weapons",
+    "slug": "Hoslow's_Petal_Whip",
+    "url": "https://eldenring.fandom.com/wiki/Hoslow's_Petal_Whip"
+  },
+  {
+    "title": "Magma Whip Candlestick",
+    "category": "Weapons",
+    "slug": "Magma_Whip_Candlestick",
+    "url": "https://eldenring.fandom.com/wiki/Magma_Whip_Candlestick"
+  },
+  {
+    "title": "Thorned Whip",
+    "category": "Weapons",
+    "slug": "Thorned_Whip",
+    "url": "https://eldenring.fandom.com/wiki/Thorned_Whip"
+  },
+  {
+    "title": "Tooth Whip",
+    "category": "Weapons",
+    "slug": "Tooth_Whip",
+    "url": "https://eldenring.fandom.com/wiki/Tooth_Whip"
+  },
+  {
+    "title": "Urumi",
+    "category": "Weapons",
+    "slug": "Urumi",
+    "url": "https://eldenring.fandom.com/wiki/Urumi"
+  },
+  {
+    "title": "Whip",
+    "category": "Weapons",
+    "slug": "Whip",
+    "url": "https://eldenring.fandom.com/wiki/Whip"
+  },
+  {
+    "title": "Hand Ballista",
+    "category": "Weapons",
+    "slug": "Hand_Ballista",
+    "url": "https://eldenring.fandom.com/wiki/Hand_Ballista"
+  },
+  {
+    "title": "Jar Cannon",
+    "category": "Weapons",
+    "slug": "Jar_Cannon",
+    "url": "https://eldenring.fandom.com/wiki/Jar_Cannon"
+  },
+  {
+    "title": "Rabbath's Cannon",
+    "category": "Weapons",
+    "slug": "Rabbath's_Cannon",
+    "url": "https://eldenring.fandom.com/wiki/Rabbath's_Cannon"
+  },
+  {
+    "title": "Albinauric Bow",
+    "category": "Weapons",
+    "slug": "Albinauric_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Albinauric_Bow"
+  },
+  {
+    "title": "Ansbach's Longbow",
+    "category": "Weapons",
+    "slug": "Ansbach's_Longbow",
+    "url": "https://eldenring.fandom.com/wiki/Ansbach's_Longbow"
+  },
+  {
+    "title": "Black Bow",
+    "category": "Weapons",
+    "slug": "Black_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Black_Bow"
+  },
+  {
+    "title": "Erdtree Bow",
+    "category": "Weapons",
+    "slug": "Erdtree_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Erdtree_Bow"
+  },
+  {
+    "title": "Horn Bow",
+    "category": "Weapons",
+    "slug": "Horn_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Horn_Bow"
+  },
+  {
+    "title": "Longbow",
+    "category": "Weapons",
+    "slug": "Longbow",
+    "url": "https://eldenring.fandom.com/wiki/Longbow"
+  },
+  {
+    "title": "Pulley Bow",
+    "category": "Weapons",
+    "slug": "Pulley_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Pulley_Bow"
+  },
+  {
+    "title": "Serpent Bow",
+    "category": "Weapons",
+    "slug": "Serpent_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Serpent_Bow"
+  },
+  {
+    "title": "Arbalest",
+    "category": "Weapons",
+    "slug": "Arbalest",
+    "url": "https://eldenring.fandom.com/wiki/Arbalest"
+  },
+  {
+    "title": "Crepus's Black-Key Crossbow",
+    "category": "Weapons",
+    "slug": "Crepus's_Black-Key_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Crepus's_Black-Key_Crossbow"
+  },
+  {
+    "title": "Full Moon Crossbow",
+    "category": "Weapons",
+    "slug": "Full_Moon_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Full_Moon_Crossbow"
+  },
+  {
+    "title": "Heavy Crossbow",
+    "category": "Weapons",
+    "slug": "Heavy_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Heavy_Crossbow"
+  },
+  {
+    "title": "Light Crossbow",
+    "category": "Weapons",
+    "slug": "Light_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Light_Crossbow"
+  },
+  {
+    "title": "Pulley Crossbow",
+    "category": "Weapons",
+    "slug": "Pulley_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Pulley_Crossbow"
+  },
+  {
+    "title": "Repeating Crossbow",
+    "category": "Weapons",
+    "slug": "Repeating_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Repeating_Crossbow"
+  },
+  {
+    "title": "Soldier's Crossbow",
+    "category": "Weapons",
+    "slug": "Soldier's_Crossbow",
+    "url": "https://eldenring.fandom.com/wiki/Soldier's_Crossbow"
+  },
+  {
+    "title": "Erdtree Greatbow",
+    "category": "Weapons",
+    "slug": "Erdtree_Greatbow",
+    "url": "https://eldenring.fandom.com/wiki/Erdtree_Greatbow"
+  },
+  {
+    "title": "Golem Greatbow",
+    "category": "Weapons",
+    "slug": "Golem_Greatbow",
+    "url": "https://eldenring.fandom.com/wiki/Golem_Greatbow"
+  },
+  {
+    "title": "Greatbow",
+    "category": "Weapons",
+    "slug": "Greatbow",
+    "url": "https://eldenring.fandom.com/wiki/Greatbow"
+  },
+  {
+    "title": "Igon's Greatbow",
+    "category": "Weapons",
+    "slug": "Igon's_Greatbow",
+    "url": "https://eldenring.fandom.com/wiki/Igon's_Greatbow"
+  },
+  {
+    "title": "Lion Greatbow",
+    "category": "Weapons",
+    "slug": "Lion_Greatbow",
+    "url": "https://eldenring.fandom.com/wiki/Lion_Greatbow"
+  },
+  {
+    "title": "Bone Bow",
+    "category": "Weapons",
+    "slug": "Bone_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Bone_Bow"
+  },
+  {
+    "title": "Composite Bow",
+    "category": "Weapons",
+    "slug": "Composite_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Composite_Bow"
+  },
+  {
+    "title": "Harp Bow",
+    "category": "Weapons",
+    "slug": "Harp_Bow",
+    "url": "https://eldenring.fandom.com/wiki/Harp_Bow"
+  },
+  {
+    "title": "Misbegotten Shortbow",
+    "category": "Weapons",
+    "slug": "Misbegotten_Shortbow",
+    "url": "https://eldenring.fandom.com/wiki/Misbegotten_Shortbow"
+  },
+  {
+    "title": "Red Branch Shortbow",
+    "category": "Weapons",
+    "slug": "Red_Branch_Shortbow",
+    "url": "https://eldenring.fandom.com/wiki/Red_Branch_Shortbow"
+  },
+  {
+    "title": "Shortbow",
+    "category": "Weapons",
+    "slug": "Shortbow",
+    "url": "https://eldenring.fandom.com/wiki/Shortbow"
+  },
+  {
+    "title": "Staves",
+    "category": "Weapons",
+    "slug": "Staves",
+    "url": "https://eldenring.fandom.com/wiki/Staves"
+  },
+  {
+    "title": "Academy Glintstone Staff",
+    "category": "Weapons",
+    "slug": "Academy_Glintstone_Staff",
+    "url": "https://eldenring.fandom.com/wiki/Academy_Glintstone_Staff"
+  },
+  {
+    "title": "Albinauric Staff",
+    "category": "Weapons",
+    "slug": "Albinauric_Staff",
+    "url": "https://eldenring.fandom.com/wiki/Albinauric_Staff"
+  },
+  {
+    "title": "Astrologer's Staff",
+    "category": "Weapons",
+    "slug": "Astrologer's_Staff",
+    "url": "https://eldenring.fandom.com/wiki/Astrologer's_Staff"
+  },
+  {
+    "title": "Azur's Glintstone Staff",
+    "category": "Weapons",
+    "slug": "Azur's_Glintstone_Staff",
+    "url": "https://eldenring.fandom.com/wiki/Azur's_Glintstone_Staff"
+  },
+  {
+    "title": "Carian Glintblade Staff",
+    "category": "Weapons",
+    "slug": "Carian_Glintblade_Staff",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Glintblade_Staff"
+  },
+  {
+    "title": "Carian Glintstone Staff",
+    "category": "Weapons",
+    "slug": "Carian_Glintstone_Staff",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Glintstone_Staff"
+  },
+  {
+    "title": "Carian Regal Scepter",
+    "category": "Weapons",
+    "slug": "Carian_Regal_Scepter",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Regal_Scepter"
+  },
+  {
+    "title": "Clawmark Seal",
+    "category": "Weapons",
+    "slug": "Clawmark_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Clawmark_Seal"
+  },
+  {
+    "title": "Dragon Communion Seal",
+    "category": "Weapons",
+    "slug": "Dragon_Communion_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Dragon_Communion_Seal"
+  },
+  {
+    "title": "Dryleaf Seal",
+    "category": "Weapons",
+    "slug": "Dryleaf_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Dryleaf_Seal"
+  },
+  {
+    "title": "Erdtree Seal",
+    "category": "Weapons",
+    "slug": "Erdtree_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Erdtree_Seal"
+  },
+  {
+    "title": "Finger Seal",
+    "category": "Weapons",
+    "slug": "Finger_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Finger_Seal"
+  },
+  {
+    "title": "Fire Knight's Seal",
+    "category": "Weapons",
+    "slug": "Fire_Knight's_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Fire_Knight's_Seal"
+  },
+  {
+    "title": "Frenzied Flame Seal",
+    "category": "Weapons",
+    "slug": "Frenzied_Flame_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Frenzied_Flame_Seal"
+  },
+  {
+    "title": "Giant's Seal",
+    "category": "Weapons",
+    "slug": "Giant's_Seal",
+    "url": "https://eldenring.fandom.com/wiki/Giant's_Seal"
+  },
+  {
+    "title": "Bosses",
+    "category": "Bosses",
+    "slug": "Bosses",
+    "url": "https://eldenring.fandom.com/wiki/Bosses"
+  },
+  {
+    "title": "Bosses (Shadow of the Erdtree)",
+    "category": "Bosses",
+    "slug": "Bosses_(Shadow_of_the_Erdtree)",
+    "url": "https://eldenring.fandom.com/wiki/Bosses_(Shadow_of_the_Erdtree)"
+  },
+  {
+    "title": "Abductor Virgin",
+    "category": "Bosses",
+    "slug": "Abductor_Virgin",
+    "url": "https://eldenring.fandom.com/wiki/Abductor_Virgin"
+  },
+  {
+    "title": "Adan, Thief of Fire",
+    "category": "Bosses",
+    "slug": "Adan,_Thief_of_Fire",
+    "url": "https://eldenring.fandom.com/wiki/Adan,_Thief_of_Fire"
+  },
+  {
+    "title": "Alecto, Black Knife Ringleader",
+    "category": "Bosses",
+    "slug": "Alecto,_Black_Knife_Ringleader",
+    "url": "https://eldenring.fandom.com/wiki/Alecto,_Black_Knife_Ringleader"
+  },
+  {
+    "title": "Ancestor Spirit",
+    "category": "Bosses",
+    "slug": "Ancestor_Spirit",
+    "url": "https://eldenring.fandom.com/wiki/Ancestor_Spirit"
+  },
+  {
+    "title": "Ancient Dragon Lansseax",
+    "category": "Bosses",
+    "slug": "Ancient_Dragon_Lansseax",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragon_Lansseax"
+  },
+  {
+    "title": "Ancient Dragon Senessax",
+    "category": "Bosses",
+    "slug": "Ancient_Dragon_Senessax",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragon_Senessax"
+  },
+  {
+    "title": "Ancient Dragon-Man",
+    "category": "Bosses",
+    "slug": "Ancient_Dragon-Man",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragon-Man"
+  },
+  {
+    "title": "Ancient Hero of Zamor",
+    "category": "Bosses",
+    "slug": "Ancient_Hero_of_Zamor",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Hero_of_Zamor"
+  },
+  {
+    "title": "Arbor Sentinel",
+    "category": "Bosses",
+    "slug": "Arbor_Sentinel",
+    "url": "https://eldenring.fandom.com/wiki/Arbor_Sentinel"
+  },
+  {
+    "title": "Astel, Naturalborn of the Void",
+    "category": "Bosses",
+    "slug": "Astel,_Naturalborn_of_the_Void",
+    "url": "https://eldenring.fandom.com/wiki/Astel,_Naturalborn_of_the_Void"
+  },
+  {
+    "title": "Astel, Stars of Darkness",
+    "category": "Bosses",
+    "slug": "Astel,_Stars_of_Darkness",
+    "url": "https://eldenring.fandom.com/wiki/Astel,_Stars_of_Darkness"
+  },
+  {
     "title": "Battlemage",
     "category": "Bosses",
     "slug": "Battlemage",
     "url": "https://eldenring.fandom.com/wiki/Battlemage"
-  },
-  {
-    "title": "Beloved Stardust",
-    "category": "Talismans",
-    "slug": "Beloved_Stardust",
-    "url": "https://eldenring.fandom.com/wiki/Beloved_Stardust"
-  },
-  {
-    "title": "Carian Slicer",
-    "category": "Sorceries",
-    "slug": "Carian_Slicer",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Slicer"
-  },
-  {
-    "title": "Beast Claw (Spell)",
-    "category": "Incantations",
-    "slug": "Beast_Claw_(Spell)",
-    "url": "https://eldenring.fandom.com/wiki/Beast_Claw_(Spell)"
-  },
-  {
-    "title": "Curved Greatswords",
-    "category": "Weapons",
-    "slug": "Curved_Greatswords",
-    "url": "https://eldenring.fandom.com/wiki/Curved_Greatswords"
   },
   {
     "title": "Bayle the Dread",
@@ -432,58 +1560,10 @@
     "url": "https://eldenring.fandom.com/wiki/Bayle_the_Dread"
   },
   {
-    "title": "Blade of Mercy",
-    "category": "Talismans",
-    "slug": "Blade_of_Mercy",
-    "url": "https://eldenring.fandom.com/wiki/Blade_of_Mercy"
-  },
-  {
-    "title": "Cherishing Fingers",
-    "category": "Sorceries",
-    "slug": "Cherishing_Fingers",
-    "url": "https://eldenring.fandom.com/wiki/Cherishing_Fingers"
-  },
-  {
-    "title": "Bestial Constitution",
-    "category": "Incantations",
-    "slug": "Bestial_Constitution",
-    "url": "https://eldenring.fandom.com/wiki/Bestial_Constitution"
-  },
-  {
-    "title": "Curved Swords",
-    "category": "Weapons",
-    "slug": "Curved_Swords",
-    "url": "https://eldenring.fandom.com/wiki/Curved_Swords"
-  },
-  {
     "title": "Beastman of Farum Azula",
     "category": "Bosses",
     "slug": "Beastman_of_Farum_Azula",
     "url": "https://eldenring.fandom.com/wiki/Beastman_of_Farum_Azula"
-  },
-  {
-    "title": "Blessed Blue Dew Talisman",
-    "category": "Talismans",
-    "slug": "Blessed_Blue_Dew_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Blessed_Blue_Dew_Talisman"
-  },
-  {
-    "title": "Collapsing Stars",
-    "category": "Sorceries",
-    "slug": "Collapsing_Stars",
-    "url": "https://eldenring.fandom.com/wiki/Collapsing_Stars"
-  },
-  {
-    "title": "Bestial Sling",
-    "category": "Incantations",
-    "slug": "Bestial_Sling",
-    "url": "https://eldenring.fandom.com/wiki/Bestial_Sling"
-  },
-  {
-    "title": "Daggers",
-    "category": "Weapons",
-    "slug": "Daggers",
-    "url": "https://eldenring.fandom.com/wiki/Daggers"
   },
   {
     "title": "Black Blade Kindred",
@@ -492,58 +1572,10 @@
     "url": "https://eldenring.fandom.com/wiki/Black_Blade_Kindred"
   },
   {
-    "title": "Blessed Dew Talisman",
-    "category": "Talismans",
-    "slug": "Blessed_Dew_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Blessed_Dew_Talisman"
-  },
-  {
-    "title": "Comet",
-    "category": "Sorceries",
-    "slug": "Comet",
-    "url": "https://eldenring.fandom.com/wiki/Comet"
-  },
-  {
-    "title": "Bestial Vitality",
-    "category": "Incantations",
-    "slug": "Bestial_Vitality",
-    "url": "https://eldenring.fandom.com/wiki/Bestial_Vitality"
-  },
-  {
-    "title": "Fists",
-    "category": "Weapons",
-    "slug": "Fists",
-    "url": "https://eldenring.fandom.com/wiki/Fists"
-  },
-  {
     "title": "Black Knife Assassin",
     "category": "Bosses",
     "slug": "Black_Knife_Assassin",
     "url": "https://eldenring.fandom.com/wiki/Black_Knife_Assassin"
-  },
-  {
-    "title": "Blue Dancer Charm",
-    "category": "Talismans",
-    "slug": "Blue_Dancer_Charm",
-    "url": "https://eldenring.fandom.com/wiki/Blue_Dancer_Charm"
-  },
-  {
-    "title": "Comet Azur",
-    "category": "Sorceries",
-    "slug": "Comet_Azur",
-    "url": "https://eldenring.fandom.com/wiki/Comet_Azur"
-  },
-  {
-    "title": "Black Blade",
-    "category": "Incantations",
-    "slug": "Black_Blade",
-    "url": "https://eldenring.fandom.com/wiki/Black_Blade"
-  },
-  {
-    "title": "Flails",
-    "category": "Weapons",
-    "slug": "Flails",
-    "url": "https://eldenring.fandom.com/wiki/Flails"
   },
   {
     "title": "Black Knight Edredd",
@@ -552,58 +1584,10 @@
     "url": "https://eldenring.fandom.com/wiki/Black_Knight_Edredd"
   },
   {
-    "title": "Blue-Feathered Branchsword",
-    "category": "Talismans",
-    "slug": "Blue-Feathered_Branchsword",
-    "url": "https://eldenring.fandom.com/wiki/Blue-Feathered_Branchsword"
-  },
-  {
-    "title": "Crystal Barrage",
-    "category": "Sorceries",
-    "slug": "Crystal_Barrage",
-    "url": "https://eldenring.fandom.com/wiki/Crystal_Barrage"
-  },
-  {
-    "title": "Black Flame",
-    "category": "Incantations",
-    "slug": "Black_Flame",
-    "url": "https://eldenring.fandom.com/wiki/Black_Flame"
-  },
-  {
-    "title": "Great Hammers",
-    "category": "Weapons",
-    "slug": "Great_Hammers",
-    "url": "https://eldenring.fandom.com/wiki/Great_Hammers"
-  },
-  {
     "title": "Black Knight Garrew",
     "category": "Bosses",
     "slug": "Black_Knight_Garrew",
     "url": "https://eldenring.fandom.com/wiki/Black_Knight_Garrew"
-  },
-  {
-    "title": "Boltdrake Talisman",
-    "category": "Talismans",
-    "slug": "Boltdrake_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman"
-  },
-  {
-    "title": "Crystal Burst",
-    "category": "Sorceries",
-    "slug": "Crystal_Burst",
-    "url": "https://eldenring.fandom.com/wiki/Crystal_Burst"
-  },
-  {
-    "title": "Black Flame Blade",
-    "category": "Incantations",
-    "slug": "Black_Flame_Blade",
-    "url": "https://eldenring.fandom.com/wiki/Black_Flame_Blade"
-  },
-  {
-    "title": "Great Katanas",
-    "category": "Weapons",
-    "slug": "Great_Katanas",
-    "url": "https://eldenring.fandom.com/wiki/Great_Katanas"
   },
   {
     "title": "Bloodhound Knight",
@@ -612,58 +1596,10 @@
     "url": "https://eldenring.fandom.com/wiki/Bloodhound_Knight"
   },
   {
-    "title": "Boltdrake Talisman +1",
-    "category": "Talismans",
-    "slug": "Boltdrake_Talisman_+1",
-    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+1"
-  },
-  {
-    "title": "Crystal Release",
-    "category": "Sorceries",
-    "slug": "Crystal_Release",
-    "url": "https://eldenring.fandom.com/wiki/Crystal_Release"
-  },
-  {
-    "title": "Black Flame Ritual",
-    "category": "Incantations",
-    "slug": "Black_Flame_Ritual",
-    "url": "https://eldenring.fandom.com/wiki/Black_Flame_Ritual"
-  },
-  {
-    "title": "Great Spears",
-    "category": "Weapons",
-    "slug": "Great_Spears",
-    "url": "https://eldenring.fandom.com/wiki/Great_Spears"
-  },
-  {
     "title": "Bloodhound Knight Darriwil",
     "category": "Bosses",
     "slug": "Bloodhound_Knight_Darriwil",
     "url": "https://eldenring.fandom.com/wiki/Bloodhound_Knight_Darriwil"
-  },
-  {
-    "title": "Boltdrake Talisman +2",
-    "category": "Talismans",
-    "slug": "Boltdrake_Talisman_+2",
-    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+2"
-  },
-  {
-    "title": "Crystal Torrent",
-    "category": "Sorceries",
-    "slug": "Crystal_Torrent",
-    "url": "https://eldenring.fandom.com/wiki/Crystal_Torrent"
-  },
-  {
-    "title": "Black Flame's Protection",
-    "category": "Incantations",
-    "slug": "Black_Flame's_Protection",
-    "url": "https://eldenring.fandom.com/wiki/Black_Flame's_Protection"
-  },
-  {
-    "title": "Greataxes",
-    "category": "Weapons",
-    "slug": "Greataxes",
-    "url": "https://eldenring.fandom.com/wiki/Greataxes"
   },
   {
     "title": "Bols, Carian Knight",
@@ -672,58 +1608,10 @@
     "url": "https://eldenring.fandom.com/wiki/Bols,_Carian_Knight"
   },
   {
-    "title": "Boltdrake Talisman +3",
-    "category": "Talismans",
-    "slug": "Boltdrake_Talisman_+3",
-    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+3"
-  },
-  {
-    "title": "Eternal Darkness",
-    "category": "Sorceries",
-    "slug": "Eternal_Darkness",
-    "url": "https://eldenring.fandom.com/wiki/Eternal_Darkness"
-  },
-  {
-    "title": "Blessing of the Erdtree",
-    "category": "Incantations",
-    "slug": "Blessing_of_the_Erdtree",
-    "url": "https://eldenring.fandom.com/wiki/Blessing_of_the_Erdtree"
-  },
-  {
-    "title": "Greatbows",
-    "category": "Weapons",
-    "slug": "Greatbows",
-    "url": "https://eldenring.fandom.com/wiki/Greatbows"
-  },
-  {
     "title": "Borealis the Freezing Fog",
     "category": "Bosses",
     "slug": "Borealis_the_Freezing_Fog",
     "url": "https://eldenring.fandom.com/wiki/Borealis_the_Freezing_Fog"
-  },
-  {
-    "title": "Boltdrake Talismans",
-    "category": "Talismans",
-    "slug": "Boltdrake_Talismans",
-    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talismans"
-  },
-  {
-    "title": "Explosive Ghostflame",
-    "category": "Sorceries",
-    "slug": "Explosive_Ghostflame",
-    "url": "https://eldenring.fandom.com/wiki/Explosive_Ghostflame"
-  },
-  {
-    "title": "Blessing's Boon",
-    "category": "Incantations",
-    "slug": "Blessing's_Boon",
-    "url": "https://eldenring.fandom.com/wiki/Blessing's_Boon"
-  },
-  {
-    "title": "Greatshields",
-    "category": "Weapons",
-    "slug": "Greatshields",
-    "url": "https://eldenring.fandom.com/wiki/Greatshields"
   },
   {
     "title": "Cemetery Shade",
@@ -732,58 +1620,10 @@
     "url": "https://eldenring.fandom.com/wiki/Cemetery_Shade"
   },
   {
-    "title": "Bull-Goat's Talisman",
-    "category": "Talismans",
-    "slug": "Bull-Goat's_Talisman",
-    "url": "https://eldenring.fandom.com/wiki/Bull-Goat's_Talisman"
-  },
-  {
-    "title": "Fia's Mist",
-    "category": "Sorceries",
-    "slug": "Fia's_Mist",
-    "url": "https://eldenring.fandom.com/wiki/Fia's_Mist"
-  },
-  {
-    "title": "Bloodboon",
-    "category": "Incantations",
-    "slug": "Bloodboon",
-    "url": "https://eldenring.fandom.com/wiki/Bloodboon"
-  },
-  {
-    "title": "Greatswords",
-    "category": "Weapons",
-    "slug": "Greatswords",
-    "url": "https://eldenring.fandom.com/wiki/Greatswords"
-  },
-  {
     "title": "Chief Bloodfiend",
     "category": "Bosses",
     "slug": "Chief_Bloodfiend",
     "url": "https://eldenring.fandom.com/wiki/Chief_Bloodfiend"
-  },
-  {
-    "title": "Carian Filigreed Crest",
-    "category": "Talismans",
-    "slug": "Carian_Filigreed_Crest",
-    "url": "https://eldenring.fandom.com/wiki/Carian_Filigreed_Crest"
-  },
-  {
-    "title": "Fleeting Microcosm",
-    "category": "Sorceries",
-    "slug": "Fleeting_Microcosm",
-    "url": "https://eldenring.fandom.com/wiki/Fleeting_Microcosm"
-  },
-  {
-    "title": "Bloodflame Blade",
-    "category": "Incantations",
-    "slug": "Bloodflame_Blade",
-    "url": "https://eldenring.fandom.com/wiki/Bloodflame_Blade"
-  },
-  {
-    "title": "Halberds",
-    "category": "Weapons",
-    "slug": "Halberds",
-    "url": "https://eldenring.fandom.com/wiki/Halberds"
   },
   {
     "title": "Cleanrot Knight",
@@ -792,58 +1632,10 @@
     "url": "https://eldenring.fandom.com/wiki/Cleanrot_Knight"
   },
   {
-    "title": "Cerulean Amber Medallion",
-    "category": "Talismans",
-    "slug": "Cerulean_Amber_Medallion",
-    "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion"
-  },
-  {
-    "title": "Founding Rain of Stars",
-    "category": "Sorceries",
-    "slug": "Founding_Rain_of_Stars",
-    "url": "https://eldenring.fandom.com/wiki/Founding_Rain_of_Stars"
-  },
-  {
-    "title": "Bloodflame Talons",
-    "category": "Incantations",
-    "slug": "Bloodflame_Talons",
-    "url": "https://eldenring.fandom.com/wiki/Bloodflame_Talons"
-  },
-  {
-    "title": "Hammers",
-    "category": "Weapons",
-    "slug": "Hammers",
-    "url": "https://eldenring.fandom.com/wiki/Hammers"
-  },
-  {
     "title": "Commander Gaius",
     "category": "Bosses",
     "slug": "Commander_Gaius",
     "url": "https://eldenring.fandom.com/wiki/Commander_Gaius"
-  },
-  {
-    "title": "Cerulean Amber Medallion +1",
-    "category": "Talismans",
-    "slug": "Cerulean_Amber_Medallion_+1",
-    "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion_+1"
-  },
-  {
-    "title": "Freezing Mist",
-    "category": "Sorceries",
-    "slug": "Freezing_Mist",
-    "url": "https://eldenring.fandom.com/wiki/Freezing_Mist"
-  },
-  {
-    "title": "Borealis's Mist",
-    "category": "Incantations",
-    "slug": "Borealis's_Mist",
-    "url": "https://eldenring.fandom.com/wiki/Borealis's_Mist"
-  },
-  {
-    "title": "Hand-to-Hand",
-    "category": "Weapons",
-    "slug": "Hand-to-Hand",
-    "url": "https://eldenring.fandom.com/wiki/Hand-to-Hand"
   },
   {
     "title": "Commander Niall",
@@ -852,34 +1644,184 @@
     "url": "https://eldenring.fandom.com/wiki/Commander_Niall"
   },
   {
-    "title": "Cerulean Amber Medallion +2",
-    "category": "Talismans",
-    "slug": "Cerulean_Amber_Medallion_+2",
-    "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion_+2"
-  },
-  {
-    "title": "Frozen Armament",
-    "category": "Sorceries",
-    "slug": "Frozen_Armament",
-    "url": "https://eldenring.fandom.com/wiki/Frozen_Armament"
-  },
-  {
-    "title": "Burn, O Flame!",
-    "category": "Incantations",
-    "slug": "Burn,_O_Flame!",
-    "url": "https://eldenring.fandom.com/wiki/Burn,_O_Flame!"
-  },
-  {
-    "title": "Heavy Thrusting Swords",
-    "category": "Weapons",
-    "slug": "Heavy_Thrusting_Swords",
-    "url": "https://eldenring.fandom.com/wiki/Heavy_Thrusting_Swords"
-  },
-  {
     "title": "Commander O'Neil",
     "category": "Bosses",
     "slug": "Commander_O'Neil",
     "url": "https://eldenring.fandom.com/wiki/Commander_O'Neil"
+  },
+  {
+    "title": "Talismans",
+    "category": "Talismans",
+    "slug": "Talismans",
+    "url": "https://eldenring.fandom.com/wiki/Talismans"
+  },
+  {
+    "title": "Talismans (Shadow of the Erdtree)",
+    "category": "Talismans",
+    "slug": "Talismans_(Shadow_of_the_Erdtree)",
+    "url": "https://eldenring.fandom.com/wiki/Talismans_(Shadow_of_the_Erdtree)"
+  },
+  {
+    "title": "Aged One's Exultation",
+    "category": "Talismans",
+    "slug": "Aged_One's_Exultation",
+    "url": "https://eldenring.fandom.com/wiki/Aged_One's_Exultation"
+  },
+  {
+    "title": "Ailment Talisman",
+    "category": "Talismans",
+    "slug": "Ailment_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Ailment_Talisman"
+  },
+  {
+    "title": "Ancestral Spirit's Horn",
+    "category": "Talismans",
+    "slug": "Ancestral_Spirit's_Horn",
+    "url": "https://eldenring.fandom.com/wiki/Ancestral_Spirit's_Horn"
+  },
+  {
+    "title": "Arrow's Reach Talisman",
+    "category": "Talismans",
+    "slug": "Arrow's_Reach_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Arrow's_Reach_Talisman"
+  },
+  {
+    "title": "Arrow's Soaring Sting Talisman",
+    "category": "Talismans",
+    "slug": "Arrow's_Soaring_Sting_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Arrow's_Soaring_Sting_Talisman"
+  },
+  {
+    "title": "Arrow's Sting Talisman",
+    "category": "Talismans",
+    "slug": "Arrow's_Sting_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Arrow's_Sting_Talisman"
+  },
+  {
+    "title": "Arsenal Charm",
+    "category": "Talismans",
+    "slug": "Arsenal_Charm",
+    "url": "https://eldenring.fandom.com/wiki/Arsenal_Charm"
+  },
+  {
+    "title": "Arsenal Charm +1",
+    "category": "Talismans",
+    "slug": "Arsenal_Charm_+1",
+    "url": "https://eldenring.fandom.com/wiki/Arsenal_Charm_+1"
+  },
+  {
+    "title": "Assassin's Cerulean Dagger",
+    "category": "Talismans",
+    "slug": "Assassin's_Cerulean_Dagger",
+    "url": "https://eldenring.fandom.com/wiki/Assassin's_Cerulean_Dagger"
+  },
+  {
+    "title": "Assassin's Crimson Dagger",
+    "category": "Talismans",
+    "slug": "Assassin's_Crimson_Dagger",
+    "url": "https://eldenring.fandom.com/wiki/Assassin's_Crimson_Dagger"
+  },
+  {
+    "title": "Axe Talisman",
+    "category": "Talismans",
+    "slug": "Axe_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Axe_Talisman"
+  },
+  {
+    "title": "Beloved Stardust",
+    "category": "Talismans",
+    "slug": "Beloved_Stardust",
+    "url": "https://eldenring.fandom.com/wiki/Beloved_Stardust"
+  },
+  {
+    "title": "Blade of Mercy",
+    "category": "Talismans",
+    "slug": "Blade_of_Mercy",
+    "url": "https://eldenring.fandom.com/wiki/Blade_of_Mercy"
+  },
+  {
+    "title": "Blessed Blue Dew Talisman",
+    "category": "Talismans",
+    "slug": "Blessed_Blue_Dew_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Blessed_Blue_Dew_Talisman"
+  },
+  {
+    "title": "Blessed Dew Talisman",
+    "category": "Talismans",
+    "slug": "Blessed_Dew_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Blessed_Dew_Talisman"
+  },
+  {
+    "title": "Blue Dancer Charm",
+    "category": "Talismans",
+    "slug": "Blue_Dancer_Charm",
+    "url": "https://eldenring.fandom.com/wiki/Blue_Dancer_Charm"
+  },
+  {
+    "title": "Blue-Feathered Branchsword",
+    "category": "Talismans",
+    "slug": "Blue-Feathered_Branchsword",
+    "url": "https://eldenring.fandom.com/wiki/Blue-Feathered_Branchsword"
+  },
+  {
+    "title": "Boltdrake Talisman",
+    "category": "Talismans",
+    "slug": "Boltdrake_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman"
+  },
+  {
+    "title": "Boltdrake Talisman +1",
+    "category": "Talismans",
+    "slug": "Boltdrake_Talisman_+1",
+    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+1"
+  },
+  {
+    "title": "Boltdrake Talisman +2",
+    "category": "Talismans",
+    "slug": "Boltdrake_Talisman_+2",
+    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+2"
+  },
+  {
+    "title": "Boltdrake Talisman +3",
+    "category": "Talismans",
+    "slug": "Boltdrake_Talisman_+3",
+    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talisman_+3"
+  },
+  {
+    "title": "Boltdrake Talismans",
+    "category": "Talismans",
+    "slug": "Boltdrake_Talismans",
+    "url": "https://eldenring.fandom.com/wiki/Boltdrake_Talismans"
+  },
+  {
+    "title": "Bull-Goat's Talisman",
+    "category": "Talismans",
+    "slug": "Bull-Goat's_Talisman",
+    "url": "https://eldenring.fandom.com/wiki/Bull-Goat's_Talisman"
+  },
+  {
+    "title": "Carian Filigreed Crest",
+    "category": "Talismans",
+    "slug": "Carian_Filigreed_Crest",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Filigreed_Crest"
+  },
+  {
+    "title": "Cerulean Amber Medallion",
+    "category": "Talismans",
+    "slug": "Cerulean_Amber_Medallion",
+    "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion"
+  },
+  {
+    "title": "Cerulean Amber Medallion +1",
+    "category": "Talismans",
+    "slug": "Cerulean_Amber_Medallion_+1",
+    "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion_+1"
+  },
+  {
+    "title": "Cerulean Amber Medallion +2",
+    "category": "Talismans",
+    "slug": "Cerulean_Amber_Medallion_+2",
+    "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion_+2"
   },
   {
     "title": "Cerulean Amber Medallion +3",
@@ -888,10 +1830,358 @@
     "url": "https://eldenring.fandom.com/wiki/Cerulean_Amber_Medallion_+3"
   },
   {
+    "title": "Sorceries",
+    "category": "Sorceries",
+    "slug": "Sorceries",
+    "url": "https://eldenring.fandom.com/wiki/Sorceries"
+  },
+  {
+    "title": "Adula's Moonblade",
+    "category": "Sorceries",
+    "slug": "Adula's_Moonblade",
+    "url": "https://eldenring.fandom.com/wiki/Adula's_Moonblade"
+  },
+  {
+    "title": "Ambush Shard",
+    "category": "Sorceries",
+    "slug": "Ambush_Shard",
+    "url": "https://eldenring.fandom.com/wiki/Ambush_Shard"
+  },
+  {
+    "title": "Ancient Death Rancor",
+    "category": "Sorceries",
+    "slug": "Ancient_Death_Rancor",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Death_Rancor"
+  },
+  {
+    "title": "Blades of Stone",
+    "category": "Sorceries",
+    "slug": "Blades_of_Stone",
+    "url": "https://eldenring.fandom.com/wiki/Blades_of_Stone"
+  },
+  {
+    "title": "Briars of Punishment",
+    "category": "Sorceries",
+    "slug": "Briars_of_Punishment",
+    "url": "https://eldenring.fandom.com/wiki/Briars_of_Punishment"
+  },
+  {
+    "title": "Briars of Sin (spell)",
+    "category": "Sorceries",
+    "slug": "Briars_of_Sin_(spell)",
+    "url": "https://eldenring.fandom.com/wiki/Briars_of_Sin_(spell)"
+  },
+  {
+    "title": "Cannon of Haima",
+    "category": "Sorceries",
+    "slug": "Cannon_of_Haima",
+    "url": "https://eldenring.fandom.com/wiki/Cannon_of_Haima"
+  },
+  {
+    "title": "Carian Blade Sorceries",
+    "category": "Sorceries",
+    "slug": "Carian_Blade_Sorceries",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Blade_Sorceries"
+  },
+  {
+    "title": "Carian Greatsword",
+    "category": "Sorceries",
+    "slug": "Carian_Greatsword",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Greatsword"
+  },
+  {
+    "title": "Carian Phalanx",
+    "category": "Sorceries",
+    "slug": "Carian_Phalanx",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Phalanx"
+  },
+  {
+    "title": "Carian Piercer",
+    "category": "Sorceries",
+    "slug": "Carian_Piercer",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Piercer"
+  },
+  {
+    "title": "Carian Retaliation",
+    "category": "Sorceries",
+    "slug": "Carian_Retaliation",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Retaliation"
+  },
+  {
+    "title": "Carian Slicer",
+    "category": "Sorceries",
+    "slug": "Carian_Slicer",
+    "url": "https://eldenring.fandom.com/wiki/Carian_Slicer"
+  },
+  {
+    "title": "Cherishing Fingers",
+    "category": "Sorceries",
+    "slug": "Cherishing_Fingers",
+    "url": "https://eldenring.fandom.com/wiki/Cherishing_Fingers"
+  },
+  {
+    "title": "Collapsing Stars",
+    "category": "Sorceries",
+    "slug": "Collapsing_Stars",
+    "url": "https://eldenring.fandom.com/wiki/Collapsing_Stars"
+  },
+  {
+    "title": "Comet",
+    "category": "Sorceries",
+    "slug": "Comet",
+    "url": "https://eldenring.fandom.com/wiki/Comet"
+  },
+  {
+    "title": "Comet Azur",
+    "category": "Sorceries",
+    "slug": "Comet_Azur",
+    "url": "https://eldenring.fandom.com/wiki/Comet_Azur"
+  },
+  {
+    "title": "Crystal Barrage",
+    "category": "Sorceries",
+    "slug": "Crystal_Barrage",
+    "url": "https://eldenring.fandom.com/wiki/Crystal_Barrage"
+  },
+  {
+    "title": "Crystal Burst",
+    "category": "Sorceries",
+    "slug": "Crystal_Burst",
+    "url": "https://eldenring.fandom.com/wiki/Crystal_Burst"
+  },
+  {
+    "title": "Crystal Release",
+    "category": "Sorceries",
+    "slug": "Crystal_Release",
+    "url": "https://eldenring.fandom.com/wiki/Crystal_Release"
+  },
+  {
+    "title": "Crystal Torrent",
+    "category": "Sorceries",
+    "slug": "Crystal_Torrent",
+    "url": "https://eldenring.fandom.com/wiki/Crystal_Torrent"
+  },
+  {
+    "title": "Eternal Darkness",
+    "category": "Sorceries",
+    "slug": "Eternal_Darkness",
+    "url": "https://eldenring.fandom.com/wiki/Eternal_Darkness"
+  },
+  {
+    "title": "Explosive Ghostflame",
+    "category": "Sorceries",
+    "slug": "Explosive_Ghostflame",
+    "url": "https://eldenring.fandom.com/wiki/Explosive_Ghostflame"
+  },
+  {
+    "title": "Fia's Mist",
+    "category": "Sorceries",
+    "slug": "Fia's_Mist",
+    "url": "https://eldenring.fandom.com/wiki/Fia's_Mist"
+  },
+  {
+    "title": "Fleeting Microcosm",
+    "category": "Sorceries",
+    "slug": "Fleeting_Microcosm",
+    "url": "https://eldenring.fandom.com/wiki/Fleeting_Microcosm"
+  },
+  {
+    "title": "Founding Rain of Stars",
+    "category": "Sorceries",
+    "slug": "Founding_Rain_of_Stars",
+    "url": "https://eldenring.fandom.com/wiki/Founding_Rain_of_Stars"
+  },
+  {
+    "title": "Freezing Mist",
+    "category": "Sorceries",
+    "slug": "Freezing_Mist",
+    "url": "https://eldenring.fandom.com/wiki/Freezing_Mist"
+  },
+  {
+    "title": "Frozen Armament",
+    "category": "Sorceries",
+    "slug": "Frozen_Armament",
+    "url": "https://eldenring.fandom.com/wiki/Frozen_Armament"
+  },
+  {
     "title": "Gavel of Haima",
     "category": "Sorceries",
     "slug": "Gavel_of_Haima",
     "url": "https://eldenring.fandom.com/wiki/Gavel_of_Haima"
+  },
+  {
+    "title": "Incantations",
+    "category": "Incantations",
+    "slug": "Incantations",
+    "url": "https://eldenring.fandom.com/wiki/Incantations"
+  },
+  {
+    "title": "Agheel's Flame",
+    "category": "Incantations",
+    "slug": "Agheel's_Flame",
+    "url": "https://eldenring.fandom.com/wiki/Agheel's_Flame"
+  },
+  {
+    "title": "Ancient Dragons' Lightning Spear",
+    "category": "Incantations",
+    "slug": "Ancient_Dragons'_Lightning_Spear",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragons'_Lightning_Spear"
+  },
+  {
+    "title": "Ancient Dragons' Lightning Strike",
+    "category": "Incantations",
+    "slug": "Ancient_Dragons'_Lightning_Strike",
+    "url": "https://eldenring.fandom.com/wiki/Ancient_Dragons'_Lightning_Strike"
+  },
+  {
+    "title": "Aspects of the Crucible: Bloom",
+    "category": "Incantations",
+    "slug": "Aspects_of_the_Crucible-_Bloom",
+    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Bloom"
+  },
+  {
+    "title": "Aspects of the Crucible: Breath",
+    "category": "Incantations",
+    "slug": "Aspects_of_the_Crucible-_Breath",
+    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Breath"
+  },
+  {
+    "title": "Aspects of the Crucible: Horns",
+    "category": "Incantations",
+    "slug": "Aspects_of_the_Crucible-_Horns",
+    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Horns"
+  },
+  {
+    "title": "Aspects of the Crucible: Tail",
+    "category": "Incantations",
+    "slug": "Aspects_of_the_Crucible-_Tail",
+    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Tail"
+  },
+  {
+    "title": "Aspects of the Crucible: Thorns",
+    "category": "Incantations",
+    "slug": "Aspects_of_the_Crucible-_Thorns",
+    "url": "https://eldenring.fandom.com/wiki/Aspects_of_the_Crucible:_Thorns"
+  },
+  {
+    "title": "Assassin's Approach",
+    "category": "Incantations",
+    "slug": "Assassin's_Approach",
+    "url": "https://eldenring.fandom.com/wiki/Assassin's_Approach"
+  },
+  {
+    "title": "Barrier of Gold",
+    "category": "Incantations",
+    "slug": "Barrier_of_Gold",
+    "url": "https://eldenring.fandom.com/wiki/Barrier_of_Gold"
+  },
+  {
+    "title": "Bayle's Flame Lightning",
+    "category": "Incantations",
+    "slug": "Bayle's_Flame_Lightning",
+    "url": "https://eldenring.fandom.com/wiki/Bayle's_Flame_Lightning"
+  },
+  {
+    "title": "Bayle's Tyranny",
+    "category": "Incantations",
+    "slug": "Bayle's_Tyranny",
+    "url": "https://eldenring.fandom.com/wiki/Bayle's_Tyranny"
+  },
+  {
+    "title": "Beast Claw (Spell)",
+    "category": "Incantations",
+    "slug": "Beast_Claw_(Spell)",
+    "url": "https://eldenring.fandom.com/wiki/Beast_Claw_(Spell)"
+  },
+  {
+    "title": "Bestial Constitution",
+    "category": "Incantations",
+    "slug": "Bestial_Constitution",
+    "url": "https://eldenring.fandom.com/wiki/Bestial_Constitution"
+  },
+  {
+    "title": "Bestial Sling",
+    "category": "Incantations",
+    "slug": "Bestial_Sling",
+    "url": "https://eldenring.fandom.com/wiki/Bestial_Sling"
+  },
+  {
+    "title": "Bestial Vitality",
+    "category": "Incantations",
+    "slug": "Bestial_Vitality",
+    "url": "https://eldenring.fandom.com/wiki/Bestial_Vitality"
+  },
+  {
+    "title": "Black Blade",
+    "category": "Incantations",
+    "slug": "Black_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Black_Blade"
+  },
+  {
+    "title": "Black Flame",
+    "category": "Incantations",
+    "slug": "Black_Flame",
+    "url": "https://eldenring.fandom.com/wiki/Black_Flame"
+  },
+  {
+    "title": "Black Flame Blade",
+    "category": "Incantations",
+    "slug": "Black_Flame_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Black_Flame_Blade"
+  },
+  {
+    "title": "Black Flame Ritual",
+    "category": "Incantations",
+    "slug": "Black_Flame_Ritual",
+    "url": "https://eldenring.fandom.com/wiki/Black_Flame_Ritual"
+  },
+  {
+    "title": "Black Flame's Protection",
+    "category": "Incantations",
+    "slug": "Black_Flame's_Protection",
+    "url": "https://eldenring.fandom.com/wiki/Black_Flame's_Protection"
+  },
+  {
+    "title": "Blessing of the Erdtree",
+    "category": "Incantations",
+    "slug": "Blessing_of_the_Erdtree",
+    "url": "https://eldenring.fandom.com/wiki/Blessing_of_the_Erdtree"
+  },
+  {
+    "title": "Blessing's Boon",
+    "category": "Incantations",
+    "slug": "Blessing's_Boon",
+    "url": "https://eldenring.fandom.com/wiki/Blessing's_Boon"
+  },
+  {
+    "title": "Bloodboon",
+    "category": "Incantations",
+    "slug": "Bloodboon",
+    "url": "https://eldenring.fandom.com/wiki/Bloodboon"
+  },
+  {
+    "title": "Bloodflame Blade",
+    "category": "Incantations",
+    "slug": "Bloodflame_Blade",
+    "url": "https://eldenring.fandom.com/wiki/Bloodflame_Blade"
+  },
+  {
+    "title": "Bloodflame Talons",
+    "category": "Incantations",
+    "slug": "Bloodflame_Talons",
+    "url": "https://eldenring.fandom.com/wiki/Bloodflame_Talons"
+  },
+  {
+    "title": "Borealis's Mist",
+    "category": "Incantations",
+    "slug": "Borealis's_Mist",
+    "url": "https://eldenring.fandom.com/wiki/Borealis's_Mist"
+  },
+  {
+    "title": "Burn, O Flame!",
+    "category": "Incantations",
+    "slug": "Burn,_O_Flame!",
+    "url": "https://eldenring.fandom.com/wiki/Burn,_O_Flame!"
   },
   {
     "title": "Catch Flame",

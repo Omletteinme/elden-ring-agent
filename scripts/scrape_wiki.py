@@ -28,10 +28,23 @@ import requests
 from tqdm import tqdm
 
 API_URL = "https://eldenring.fandom.com/api.php"
-SEED_CATEGORIES = ["Weapons", "Bosses", "Talismans", "Sorceries", "Incantations"]
+
+# Directly-scraped categories: list members and take a balanced sample.
+DIRECT_CATEGORIES = ["Bosses", "Talismans", "Sorceries", "Incantations"]
+PER_DIRECT_CATEGORY = 30
+
+# Weapons need individual weapon pages (with per-weapon scaling +
+# requirement stats), not the type-overview "list" pages -- those live in
+# type subcategories nested under Melee Armaments / Ranged Weapons /
+# Catalysts (e.g. Category:Great Hammers -> Brick Hammer, Giant-Crusher).
+# Discovered dynamically so new weapon types are picked up automatically.
+WEAPON_PARENT_CATEGORIES = ["Melee Armaments", "Ranged Weapons", "Catalysts"]
+# not real weapons for build purposes (arrows/bolts)
+WEAPON_TYPE_EXCLUDE = {"Ammunition"}
+PER_WEAPON_TYPE = 8
+
 OUT_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
-RATE_LIMIT_SECONDS = 1.0
-MAX_PAGES = 150
+RATE_LIMIT_SECONDS = 0.8
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
@@ -50,7 +63,10 @@ def api_get(params: dict) -> dict:
     return resp.json()
 
 
-def list_category_members(category: str, limit_per_call: int = 100) -> list[str]:
+def list_category_members(category: str, limit_per_call: int = 100, cmtype: str = "page") -> list[str]:
+    """List member titles of a category. cmtype='page' returns articles
+    only (no nested subcategories or files); cmtype='subcat' returns
+    subcategory titles."""
     titles = []
     cmcontinue = None
     while True:
@@ -58,6 +74,7 @@ def list_category_members(category: str, limit_per_call: int = 100) -> list[str]
             "action": "query",
             "list": "categorymembers",
             "cmtitle": f"Category:{category}",
+            "cmtype": cmtype,
             "cmlimit": limit_per_call,
         }
         if cmcontinue:
@@ -68,13 +85,28 @@ def list_category_members(category: str, limit_per_call: int = 100) -> list[str]
         members = data.get("query", {}).get("categorymembers", [])
         for m in members:
             title = m["title"]
-            if not title.startswith(SKIP_TITLE_PREFIXES):
+            # when listing subcategories, titles legitimately start with
+            # "Category:" -- only apply the skip-prefix filter to page
+            # listings (where a stray Category:/Template:/File: is noise)
+            if cmtype == "subcat" or not title.startswith(SKIP_TITLE_PREFIXES):
                 titles.append(title)
 
         cmcontinue = data.get("continue", {}).get("cmcontinue")
         if not cmcontinue:
             break
     return titles
+
+
+def discover_weapon_types() -> list[str]:
+    """Weapon type subcategories (Great Hammers, Katanas, ...) nested under
+    the weapon parent categories."""
+    types: list[str] = []
+    for parent in WEAPON_PARENT_CATEGORIES:
+        for sub in list_category_members(parent, cmtype="subcat"):
+            name = sub.replace("Category:", "")
+            if name not in WEAPON_TYPE_EXCLUDE and name not in types:
+                types.append(name)
+    return types
 
 
 def fetch_page_html(title: str) -> str | None:
@@ -102,35 +134,38 @@ def slugify(title: str) -> str:
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("Discovering pages from seed categories...")
-    per_category: dict[str, list[str]] = {}
-    seen_titles: set[str] = set()
-    for category in SEED_CATEGORIES:
-        titles = [t for t in list_category_members(category) if t not in seen_titles]
-        seen_titles.update(titles)
-        per_category[category] = titles
-        print(f"  {category}: {len(titles)} pages")
-
-    # round-robin across categories so no single category (e.g. Bosses, the
-    # largest) exhausts the MAX_PAGES budget before the others are sampled
     title_to_category: dict[str, str] = {}
-    titles_to_fetch: list[str] = []
-    queues = {c: list(ts) for c, ts in per_category.items()}
-    while len(titles_to_fetch) < MAX_PAGES and any(queues.values()):
-        for category in SEED_CATEGORIES:
-            if not queues[category]:
-                continue
-            title = queues[category].pop(0)
-            titles_to_fetch.append(title)
+    ordered_titles: list[str] = []
+
+    def add(title: str, category: str):
+        if title not in title_to_category:
             title_to_category[title] = category
-            if len(titles_to_fetch) >= MAX_PAGES:
-                break
+            ordered_titles.append(title)
 
-    all_titles = title_to_category
-    print(f"\nFetching {len(titles_to_fetch)} pages (capped at {MAX_PAGES}, balanced across categories)...\n")
+    # 1) Individual weapons from each type subcategory (the Phase 7 win --
+    #    per-weapon scaling/requirement stats, not just type-overview lists).
+    print("Discovering weapon types...")
+    weapon_types = discover_weapon_types()
+    print(f"  found {len(weapon_types)} weapon types")
+    for wtype in weapon_types:
+        members = list_category_members(wtype)
+        # skip the type's own overview page (title == type name)
+        weapons = [m for m in members if m != wtype][:PER_WEAPON_TYPE]
+        for w in weapons:
+            add(w, "Weapons")
+    print(f"  {sum(1 for c in title_to_category.values() if c == 'Weapons')} individual weapons")
 
+    # 2) Balanced sample from the direct categories.
+    print("Discovering pages from direct categories...")
+    for category in DIRECT_CATEGORIES:
+        members = list_category_members(category)[:PER_DIRECT_CATEGORY]
+        for m in members:
+            add(m, category)
+        print(f"  {category}: up to {PER_DIRECT_CATEGORY}")
+
+    print(f"\nFetching {len(ordered_titles)} pages...\n")
     manifest = []
-    for title in tqdm(titles_to_fetch, desc="Fetching articles"):
+    for title in tqdm(ordered_titles, desc="Fetching articles"):
         html = fetch_page_html(title)
         time.sleep(RATE_LIMIT_SECONDS)
         if html is None:
@@ -138,7 +173,7 @@ def main():
         slug = slugify(title)
         out_path = OUT_DIR / f"{slug}.html"
         out_path.write_text(html, encoding="utf-8")
-        manifest.append({"title": title, "category": all_titles[title], "slug": slug,
+        manifest.append({"title": title, "category": title_to_category[title], "slug": slug,
                           "url": f"https://eldenring.fandom.com/wiki/{title.replace(' ', '_')}"})
 
     manifest_path = OUT_DIR.parent / "manifest.json"

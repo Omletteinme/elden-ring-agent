@@ -95,6 +95,57 @@ def _table_to_text(table: Tag) -> str:
     return "; ".join(lines)
 
 
+def _parse_requirement(text: str) -> str:
+    """The 'Required' cell is like '31 \\1h 21 \\2h' (one-/two-handed) or
+    just '0' / '5'. Render it readably."""
+    text = text.strip()
+    one = re.search(r"(\d+)\s*\\?1h", text)
+    two = re.search(r"(\d+)\s*\\?2h", text)
+    if one and two:
+        return f"{one.group(1)} ({two.group(1)} two-handed)"
+    m = re.match(r"(\d+)", text)
+    return m.group(1) if m else text
+
+
+def extract_weapon_attributes(aside: Tag, title: str) -> str | None:
+    """Weapon pages carry an 'Attributes / Required / Scaling' table nested
+    INSIDE the portable-infobox aside (so it's deleted when the aside is
+    decomposed, unless pulled out first). This is the single most important
+    data for build recommendations -- e.g. 'Strength 31 (21 two-handed),
+    scaling B' means a strength weapon. Render it as a compact, searchable
+    line so a query like 'strength weapon' matches it."""
+    table = None
+    for t in aside.find_all("table"):
+        txt = t.get_text(" ", strip=True)
+        if "Scaling" in txt and ("Required" in txt or "Requires" in txt):
+            table = t
+            break
+    if table is None:
+        return None
+
+    required: list[str] = []
+    scaling: list[str] = []
+    for tr in table.find_all("tr"):
+        cells = [c.get_text(" ", strip=True) for c in tr.find_all(["th", "td"])]
+        if len(cells) != 3:
+            continue
+        attr, req, scale = cells
+        if attr in ("Attribute", "Attributes"):  # header rows
+            continue
+        req_fmt = _parse_requirement(req)
+        if req_fmt and req_fmt != "0":
+            required.append(f"{attr} {req_fmt}")
+        if scale and scale not in ("-", ""):
+            scaling.append(f"{attr} {scale}")
+
+    if not required and not scaling:
+        return None
+    parts = []
+    parts.append("Requires: " + (", ".join(required) if required else "no attribute requirements"))
+    parts.append("Scaling: " + (", ".join(scaling) if scaling else "no attribute scaling"))
+    return f"{title} attribute requirements and scaling — " + "; ".join(parts)
+
+
 def extract_infobox_text(soup: BeautifulSoup, title: str) -> str | None:
     aside = soup.find("aside", class_="portable-infobox")
     if aside is None:
@@ -200,12 +251,19 @@ def process_page(html: str, title: str, category: str, url: str) -> list[Chunk]:
 
     infobox_text = extract_infobox_text(soup, title)
     aside = root.find("aside", class_="portable-infobox")
+    # pull the weapon attributes table out of the aside BEFORE decomposing it
+    weapon_attrs = extract_weapon_attributes(aside, title) if aside is not None else None
     if aside is not None:
         aside.decompose()
     if infobox_text:
         chunks.append(Chunk(
             id=f"{title}::infobox", title=title, category=category, url=url,
             section="Infobox", text=infobox_text,
+        ))
+    if weapon_attrs:
+        chunks.append(Chunk(
+            id=f"{title}::attributes", title=title, category=category, url=url,
+            section="Attributes", text=weapon_attrs,
         ))
 
     _remove_trailing_navbox(root)
