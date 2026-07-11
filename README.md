@@ -28,7 +28,7 @@ User question → Agent (Groq/Llama) → decides: answer directly, or call searc
 Building phase by phase — see progress below.
 
 - [x] Phase 0 — Project scaffold
-- [ ] Phase 1 — Corpus collection
+- [x] Phase 1 — Corpus collection (150 pages: Weapons/Bosses/Talismans/Sorceries/Incantations, 30 each, via MediaWiki API)
 - [ ] Phase 2 — Clean + chunk
 - [ ] Phase 3 — Embed + vector store
 - [ ] Phase 4 — Agent loop with tool-calling
